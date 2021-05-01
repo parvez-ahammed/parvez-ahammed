@@ -31,7 +31,9 @@ Skills: JS / HTML / CSS/ C
 ## Tools:
 
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
-![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) <br />
+![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
+![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=figma) 
+![Adobe XD](https://img.shields.io/badge/-Adobe%20XD-000000?style=flat&logo=adobe%20xd) <br />
 ![MS Word](https://img.shields.io/badge/-MS%20Word-000000?style=flat&logo=microsoft%20word)
 ![MS PPT](https://img.shields.io/badge/-MS%20Powerpoint-000000?style=flat&logo=microsoft%20powerpoint)
 ![Adobe PS](https://img.shields.io/badge/-Adobe%20Photoshop-000000?style=flat&logo=adobe%20photoshop)
@@ -41,4 +43,7 @@ Skills: JS / HTML / CSS/ C
 
  . You can chceck out my behance at https://www.behance.net/mumdevil/projects or give me knock on fb at  https://www.facebook.com/piru72
 
+## Github Overview
+
 ![github stats](https://github-readme-stats.vercel.app/api?username=piru72)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
