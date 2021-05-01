@@ -1,8 +1,6 @@
 ### Hi there 👋, This is Parvez Ahammed
 #### learner |developer |designer
-![learner |developer |designer](https://pbs.twimg.com/profile_banners/1158310606170140674/1593166731/1080x360)
-
-(https://media-exp1.licdn.com/dms/image/C5616AQFj2puv-q3MjQ/profile-displaybackgroundimage-shrink_350_1400/0/1619899533106?e=1625097600&v=beta&t=suxa3-AlLP1P-MwRTWQz4-5SUZToLzOMnlsbopijidw)
+![learner |developer |designer](https://pbs.twimg.com/profile_banners/1158310606170140674/1619899801/1080x360)
 
 I'm parvez from Bangladesh and I do web design and development. I really enjoy learning new things like UI/UX, js, C, as well as work in WordPress. I also love illustrations and design in general.
 
