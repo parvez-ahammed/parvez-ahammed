@@ -33,7 +33,8 @@ Skills: JS / HTML / CSS/ C
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
 ![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=figma) 
-![Adobe XD](https://img.shields.io/badge/-Adobe%20XD-000000?style=flat&logo=adobe%20xd) <br />
+![Adobe XD](https://img.shields.io/badge/-Adobe%20XD-000000?style=flat&logo=adobe%20xd) 
+![Wordpress](https://img.shields.io/badge/-Wordpress-000000?style=flat&logo=wordpress)<br />
 ![MS Word](https://img.shields.io/badge/-MS%20Word-000000?style=flat&logo=microsoft%20word)
 ![MS PPT](https://img.shields.io/badge/-MS%20Powerpoint-000000?style=flat&logo=microsoft%20powerpoint)
 ![Adobe PS](https://img.shields.io/badge/-Adobe%20Photoshop-000000?style=flat&logo=adobe%20photoshop)
