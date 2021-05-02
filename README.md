@@ -1,4 +1,4 @@
-[HitCount](http://hits.dwyl.com/piru72/piru72)
+[](http://hits.dwyl.com/piru72/piru72)
  <img src="https://komarev.com/ghpvc/?username=piru72">
 <!-- ![visitors](https://visitor-badge.laobi.icu/badge?page_id=piru72.piru72) -->
 
