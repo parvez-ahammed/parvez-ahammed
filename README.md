@@ -4,7 +4,7 @@
 
 
 ### Hi there 👋, This is Parvez Ahammed
-#### learner |developer |designer
+#### problem solver || thinker || creator
 ![learner |developer |designer](https://pbs.twimg.com/profile_banners/1158310606170140674/1619899801/1080x360)
 
 I'm parvez from Bangladesh and I do web design and development. I really enjoy learning new things like UI/UX, js, C, as well as work in WordPress. I also love illustrations and design in general.
