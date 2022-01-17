@@ -5,11 +5,11 @@
 
 ### Hi there 👋, This is Parvez Ahammed
 #### problem solver || thinker || creator
-![learner |developer |designer](https://pbs.twimg.com/profile_banners/1158310606170140674/1619899801/1080x360)
+![learner |developer](https://pbs.twimg.com/profile_banners/1158310606170140674/1619899801/1080x360)
 
-I'm parvez from Bangladesh and I do web design and development. I really enjoy learning new things like UI/UX, js, C, as well as work in WordPress. I also love illustrations and design in general.
+I'm parvez from Bangladesh and I do web design and development. I  enjoy learning new things . 
 
-Skills: JS / HTML / CSS/ C
+Skills: JAVA / HTML / CSS/ C / CPP
 
 - 🔭 I’m currently working on My own company  
 - 🌱 I’m currently learning Front end development 
@@ -32,17 +32,10 @@ Skills: JS / HTML / CSS/ C
 
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
-![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=figma) 
-![Adobe XD](https://img.shields.io/badge/-Adobe%20XD-000000?style=flat&logo=adobe%20xd) 
 ![Wordpress](https://img.shields.io/badge/-Wordpress-000000?style=flat&logo=wordpress)<br />
-![MS Word](https://img.shields.io/badge/-MS%20Word-000000?style=flat&logo=microsoft%20word)
-![MS PPT](https://img.shields.io/badge/-MS%20Powerpoint-000000?style=flat&logo=microsoft%20powerpoint)
-![Adobe PS](https://img.shields.io/badge/-Adobe%20Photoshop-000000?style=flat&logo=adobe%20photoshop)
-![Adobe Ai](https://img.shields.io/badge/-Adobe%20Illustrator-000000?style=flat&logo=adobe%20illustrator)
 
 
-
- . You can chceck out my behance at https://www.behance.net/mumdevil/projects or give me knock on fb at  https://www.facebook.com/piru72
+ . You can give me knock on fb at  https://www.facebook.com/piru72
 
 ## Github Overview
 
