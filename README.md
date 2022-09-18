@@ -59,12 +59,7 @@
 
 
 ## Github Overview
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=piru72)
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" /></p>
-
-<!-- <p align='center'>
-  <img src="https://activity-graph.herokuapp.com/graph?username=piru72&theme=react-dark" >
-</p> -->
+<img  src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" />
