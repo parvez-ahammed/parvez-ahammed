@@ -29,7 +29,7 @@
 
 <a href="https://www.instagram.com/piru_729/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/piru_729/" height="30" width="40" /></a>
 
-<a href="https://leetcode.com/piru72/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="https://leetcode.com/piru72/" height="30" width="40" /></a>
+<a href="https://leetcode.com/piru72/" target="blank"><img align="center" src="https://github.com/piru72/piru72/blob/main/images/leet-code.svg" alt="https://leetcode.com/piru72/" height="30" width="40" /></a>
 
 <a href="https://www.hackerrank.com/piru72?hr_r=1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="https://www.hackerrank.com/piru72?hr_r=1" height="30" width="40" /></a>
 </p>  
