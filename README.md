@@ -41,3 +41,5 @@ Skills: JAVA / HTML / CSS/ C / CPP
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=piru72)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" /></p>
