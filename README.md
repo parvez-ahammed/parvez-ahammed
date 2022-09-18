@@ -65,6 +65,6 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" /></p>
 
-<p align='center'>
+<!-- <p align='center'>
   <img src="https://activity-graph.herokuapp.com/graph?username=piru72&theme=react-dark" >
-</p>
+</p> -->
