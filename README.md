@@ -18,7 +18,21 @@ Skills: JAVA / HTML / CSS/ C / CPP
 
  ## Connect with me:
 
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/piru72)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/parvez-ahammed-604296198/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' height='40'>](https://www.facebook.com/piru72)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/piru_627/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/pirubic_72)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://parvezsworld.info/)  
+<p align="left">
+ 
+<a href="https://www.linkedin.com/in/piru72/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/piru72/" height="30" width="40" /></a>
+ 
+<a href="https://stackoverflow.com/users/13925224/parvez-ahammed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="https://stackoverflow.com/users/13925224/parvez-ahammed" height="30" width="40" /></a>
+ 
+<a href="https://www.facebook.com/piru72" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/piru72" height="30" width="40" /></a>
+ 
+<a href="https://www.instagram.com/piru_729/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/piru_729/" height="30" width="40" /></a>
+ 
+<a href="https://leetcode.com/piru72/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="https://leetcode.com/piru72/" height="30" width="40" /></a>
+ 
+<a href="https://www.hackerrank.com/piru72?hr_r=1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="https://www.hackerrank.com/piru72?hr_r=1" height="30" width="40" /></a>
+ 
+</p>  
 
 
 ## Languages
@@ -34,8 +48,6 @@ Skills: JAVA / HTML / CSS/ C / CPP
 ![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
 ![Wordpress](https://img.shields.io/badge/-Wordpress-000000?style=flat&logo=wordpress)<br />
 
-
- . You can give me knock on fb at  https://www.facebook.com/piru72
 
 ## Github Overview
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
