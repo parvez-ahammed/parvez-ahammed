@@ -41,20 +41,7 @@
 
 # Problem Solving Stats
 
-| OJ          | Solve Count | Username                                                          |
-| ----------- | ----------- | ----------------------------------------------------------------- |
-| Codeforces  | 00         | [piru72](https://codeforces.com/profile/piru72) |
-| HackerRank  | 00          | [piru72](https://www.hackerrank.com/piru72)     |
-| HackerEarth | 00          | [piru72](https://www.hackerearth.com/piru72)   |
-| Leetcode    | 00          | [piru72](https://www.leetcode.com/piru72)       |
-| CodeChef    | 00           | [piru72](https://www.codechef.com/users/piru72)                     |
-| AtCoder     | 00           | [piru72](https://atcoder.jp/users/piru72)                           |
-| Vjudge      | 00            | [piru72](https://vjudge.net/user/piru72)        |
-| Toph        |00            | [piru72](https://toph.co/u/piru72)              |
-| CSES        | 00           | [piru72](https://cses.fi/user/piru72)                     |
-| LightOJ     | 00           | [piru72n](https://lightoj.com/user/piru72)       |
-| SPOJ        | 00            | [piru72](https://www.spoj.com/users/piru72/)                        |
-| Total       |00        |                                                                   |
+
 
 
 
