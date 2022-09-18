@@ -2,19 +2,21 @@
  <img src="https://komarev.com/ghpvc/?username=piru72">
 <!-- ![visitors](https://visitor-badge.laobi.icu/badge?page_id=piru72.piru72) -->
 
+<h1 align="center">Hi there 👋, This is Parvez Ahammed</h1>
+<h3 align="center">A random person who is living to tell a tale.</h3>
 
-### Hi there 👋, This is Parvez Ahammed
-#### problem solver || thinker || creator
-![learner |developer](https://pbs.twimg.com/profile_banners/1158310606170140674/1619899801/1080x360)
 
-I'm parvez from Bangladesh and I do web design and development. I  enjoy learning new things . 
+- 🔭 I’m currently working on [Uni Buddy](https://github.com/piru72/Uni_buddy)
 
-Skills: JAVA / HTML / CSS/ C / CPP
+- 🌱 I’m currently learning **Data Structure, Algorithm**
 
-- 🔭 I’m currently working on My own company  
-- 🌱 I’m currently learning Front end development 
-- 😄 Pronouns: He 
-- ⚡ Fun fact: They say I am silent. 
+- 👨‍💻 All of my projects are available at [piru72](https://github.com/piru72?tab=repositories)
+
+- 💬 Ask me about **CPP, Data structures, Algorithm**
+
+- 📫 How to reach me **parvezdirom2000@gmail.com**
+
+- 📄 Know about my experiences [piru72](https://github.com/piru72?tab=repositories)
 
  ## Connect with me:
 
@@ -27,19 +29,11 @@ Skills: JAVA / HTML / CSS/ C / CPP
 <a href="https://www.hackerrank.com/piru72?hr_r=1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="https://www.hackerrank.com/piru72?hr_r=1" height="30" width="40" /></a>
 </p>  
 
-
-## Languages
-![C++](https://img.shields.io/badge/-C++-000000?style=flat&logo=c%2B%2B)
-![Python](https://img.shields.io/badge/-Python-000000?style=flat&logo=python)
-![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
-![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
-![CSS3](https://img.shields.io/badge/-CSS-000000?style=flat&logo=css3)
-
 ## Tools:
 
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
-![Wordpress](https://img.shields.io/badge/-Wordpress-000000?style=flat&logo=wordpress)<br />
+
 
 
 ## Github Overview
