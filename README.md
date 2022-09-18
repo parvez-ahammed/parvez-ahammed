@@ -34,6 +34,23 @@
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-Github-000000?style=flat&logo=github) 
 
+# Problem Solving Stats
+
+| OJ          | Solve Count | Username                                                          |
+| ----------- | ----------- | ----------------------------------------------------------------- |
+| Codeforces  | 00         | [piru72](https://codeforces.com/profile/piru72) |
+| HackerRank  | 00          | [piru72](https://www.hackerrank.com/piru72)     |
+| HackerEarth | 00          | [piru72](https://www.hackerearth.com/piru72)   |
+| Leetcode    | 00          | [piru72](https://www.leetcode.com/piru72)       |
+| CodeChef    | 00           | [piru72](https://www.codechef.com/users/piru72)                     |
+| AtCoder     | 00           | [piru72](https://atcoder.jp/users/piru72)                           |
+| Vjudge      | 00            | [piru72](https://vjudge.net/user/piru72)        |
+| Toph        |00            | [piru72](https://toph.co/u/piru72)              |
+| CSES        | 00           | [piru72](https://cses.fi/user/piru72)                     |
+| LightOJ     | 00           | [piru72n](https://lightoj.com/user/piru72)       |
+| SPOJ        | 00            | [piru72](https://www.spoj.com/users/piru72/)                        |
+| Total       |00        |                                                                   |
+
 
 
 ## Github Overview
@@ -42,3 +59,7 @@
 ![github stats](https://github-readme-stats.vercel.app/api?username=piru72)
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" /></p>
+
+<p align='center'>
+  <img src="https://activity-graph.herokuapp.com/graph?username=piru72&theme=react-dark" >
+</p>
