@@ -9,13 +9,13 @@
 
 - 🌱 I’m currently learning **Data Structure, Algorithm**
 
-- 👨‍💻 All of my projects are available at [piru72](https://github.com/piru72?tab=repositories)
+- 👨‍💻 All of my projects are available [here](https://github.com/piru72?tab=repositories)
 
 - 💬 Ask me about **CPP, Data structures, Algorithm**
 
 - 📫 How to reach me **parvezdirom2000@gmail.com**
 
-- 📄 Know about my experiences [piru72](https://github.com/piru72?tab=repositories)
+- 📄 Know about my experiences from [here](https://github.com/piru72?tab=repositories)
 
  ## Connect with me:
 
