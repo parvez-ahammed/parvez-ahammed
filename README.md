@@ -18,7 +18,7 @@
 
 - 📄 Know about my experiences from [here](https://github.com/piru72?tab=repositories)
 
-- 📄 Check out my CV [View](https://drive.google.com/file/d/15sVwjegb0Xu-xWTbtgYtnLHidxsy52kw/view?usp=sharing)
+- 📄 Check out my CV [View](https://drive.google.com/file/d/1MEqys1vsOOTXP2P-NyXsG16omC0t6Ux5/view?usp=sharing)
 
 ## Connect with me:
 
