@@ -1,8 +1,8 @@
 [](http://hits.dwyl.com/piru72/piru72)
 <img src="https://komarev.com/ghpvc/?username=piru72">
 
-<h1 align="center">Hi there 👋, This is Parvez Ahammed</h1>
-<h3 align="center">A random person who is living to tell a tale.</h3>
+<h1 align="center">Someone who is living to tell a tale.</h1>
+
 
 - 🔭 I’m currently working on [Uni Buddy](https://github.com/piru72/Uni_buddy)
 
