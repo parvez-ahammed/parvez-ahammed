@@ -4,7 +4,7 @@
 <h1 align="center">Someone who is living to tell a tale.</h1>
 
 
-- 🔭 I’m currently working on [Uni Buddy](https://github.com/piru72/Uni_buddy)
+- 🔭 I’m currently working on [Aust Buddy](https://github.com/piru72/Uni_buddy)
 
 - 🌱 I’m currently learning **Data Structure, Algorithm**
 
