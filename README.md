@@ -43,7 +43,10 @@
 
 ## Github Overview
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact)
 
-![github stats](https://github-readme-stats.vercel.app/api?username=piru72)
-<img  src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&" alt="piru72" />
+  
+  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact&theme=tokyonight)
+
+
+![github stats](https://github-readme-stats.vercel.app/api?username=piru72&theme=tokyonight)
+<img  src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&theme=tokyonight" alt="piru72" />
