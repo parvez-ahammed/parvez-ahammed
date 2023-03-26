@@ -42,15 +42,23 @@ Image or file upload to server | Pending | Not yet | Not Found|
 Service | Pending | Not yet | Not Found|
 Play Audio and Video | Pending | Not yet | Not Found|
 Firebase push notification | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
-Fragment | Pending | Not yet | Not Found|
+Gps and Location based service | Pending | Not yet | Not Found|
+Youtube API , Map API | Pending | Not yet | Not Found|
+Basics of gradle build systems | Pending | Not yet | Not Found|
+Social Login | Pending | Not yet | Not Found|
+Android Development best Practices | Pending | Not yet | Not Found|
+Git for version control| Pending | Not yet | Not Found|
+MVP Architectural Pattern | Pending | Not yet | Not Found|
+MVVP | Pending | Not yet | Not Found|
+Data Binding | Pending | Not yet | Not Found|
+Design Pattern singleton , builder,factory | Pending | Not yet | Not Found|
+Dependency Injection with Dagger 2 | Pending | Not yet | Not Found|
+HTTP response Caching | Pending | Not yet | Not Found|
+Different types of service | Pending | Not yet | Not Found|
+Audio video streaming | Pending | Not yet | Not Found|
+USE of orm | Pending | Not yet | Not Found|
+Java threading | Pending | Not yet | Not Found|
+Exception | Pending | Not yet | Not Found|
+Generics | Pending | Not yet | Not Found|
+Firebase Realtime Database | Pending | Not yet | Not Found|
+RESTful web API  implement HTTP methods| Pending | Not yet | Not Found|
