@@ -2,7 +2,7 @@
 
 Topic | Status | Implementation | Details | Resources
 ----|----|----|----|---|
-TextView |<ul><li>- [ ] </li></ul> | Not yet | Not Found|
+TextView |<ul><li>- [ ] </li></ul> | Not yet | Not found |[1. m2.material.com](https://m2.material.io/develop/android/supporting/text-view) <br> [2.developer.android.com](https://developer.android.com/reference/com/google/android/material/textview/MaterialTextView#:~:text=A%20MaterialTextView%20is%20a%20derivative,value%20from%20a%20TextAppearance%20style.) <br>[3.Difference of material textView and textView](https://stackoverflow.com/questions/70952756/difference-between-textview-and-materialtextview) 
 Button | <ul><li>- [ ] </li></ul>  | Not yet | Not Found|
 EditText | <ul><li>- [ ] </li></ul> | Not yet | Not Found|
 ImageView | <ul><li>- [ ] </li></ul> | Not yet | Not Found|
