@@ -2,8 +2,8 @@
 
 Topic | Status | Implementation | Details | Resources
 ----|----|----|----|---|
-TextView |<ul><li>- [ ] </li></ul> | Not yet | Not found |[1. m2.material.com](https://m2.material.io/develop/android/supporting/text-view) <br> [2.developer.android.com](https://developer.android.com/reference/com/google/android/material/textview/MaterialTextView#:~:text=A%20MaterialTextView%20is%20a%20derivative,value%20from%20a%20TextAppearance%20style.) <br>[3.Difference of material textView and textView](https://stackoverflow.com/questions/70952756/difference-between-textview-and-materialtextview) 
-Button | <ul><li>- [ ] </li></ul>  | Not yet | Not Found|
+TextView |<ul><li>- [ ] </li></ul> | Not yet | [1.Difference of material textView and textView](https://stackoverflow.com/questions/70952756/difference-between-textview-and-materialtextview)  |[1. m2.material.com](https://m2.material.io/develop/android/supporting/text-view) <br> [2.developer.android.com](https://developer.android.com/reference/com/google/android/material/textview/MaterialTextView#:~:text=A%20MaterialTextView%20is%20a%20derivative,value%20from%20a%20TextAppearance%20style.) <br>
+Button | <ul><li>- [ ] </li></ul>  | Not yet|Not Found | [1. Material 3 ](https://m3.material.io/components/all-buttons) <br> [2. Android Official](https://developer.android.com/reference/com/google/android/material/button/MaterialButton)
 EditText | <ul><li>- [ ] </li></ul> | Not yet | Not Found|
 ImageView | <ul><li>- [ ] </li></ul> | Not yet | Not Found|
 LinearLayout | <ul><li>- [ ] </li></ul>  | Not yet | Not Found|
