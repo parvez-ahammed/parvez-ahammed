@@ -9,4 +9,5 @@ Date | Things I have learned | Proof
 17 | 1. Rabin Karp | 1. [Problem](https://github.com/piru72/Online_Judge_Solves/commit/d491d557194912515193479b2d63c1a55e90de91)
 18 | 1. Atcode Beginer easy | 1. [Q](https://kenkoooo.com/atcoder/#/training/Boot%20camp%20for%20Beginners/1) [Ans]()
 19 | 1.Solved Leetcode , cf | 1. [Q]
-20 | 1.Solved Leetcode(neetcode array) , cf(string 1000) , atcoder(easy)  | 1. [Q]
+20 | 1.Solved Leetcode(neetcode array) , cf(string 1000 , contest) , atcoder(easy)  | 1. [Q]
+21 | 1.Solved Leetcode(Neetcode stack) , atcoder(easy) | 1. [Q]
