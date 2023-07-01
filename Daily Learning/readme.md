@@ -11,3 +11,28 @@ Date | Things I have learned | Proof
 19 | 1.Solved Leetcode , cf | 1. [Q]
 20 | 1.Solved Leetcode(neetcode array) , cf(string 1000 , contest) , atcoder(easy)  | 1. [Q]
 21 | 1.Solved Leetcode(Neetcode stack) , atcoder(easy) | 1. [Q]
+
+# July 2023
+
+## 1 
+
+So today I started the day watching video [this]() video. Point I found useful 
+1. solving problem randomly will give you a better view to understand all the possible way of solving the problem instead of learning topicwise which will already tell you which approach to choose.
+2. Follow someone who is closer to your current stats
+3. Upsolve problems
+4. Instead of focusing on lots of algos learn few with deep understanding.
+5. `learn when you are stuck`
+6. `Make your weak point the strongest`
+
+Sovled problem from 1.1 [Practice] Introduction to Competitive Programming
+Contest 1: Very Basic Practice
+
+```
+1. It's better to use const when the value is constant
+2. It is always better to use fixed when you use setprecision
+3. Keep check for tle constrains
+4. c/c++ division operator does floor division by default IF a and b are integers
+5. \n instead of endl
+6. isUpper , isAlpha , toLower , toUpper rather than ascii conversion
+7. When value is not needed just the decision is needed log can be used for large values
+```
