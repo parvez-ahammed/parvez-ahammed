@@ -12,9 +12,9 @@ Date | Things I have learned | Proof
 20 | 1.Solved Leetcode(neetcode array) , cf(string 1000 , contest) , atcoder(easy)  | 1. [Q]
 21 | 1.Solved Leetcode(Neetcode stack) , atcoder(easy) | 1. [Q]
 
-# July 2023
 
-## 1 
+
+## 1 July 2023
 
 So today I started the day watching video [this]() video. Point I found useful 
 1. solving problem randomly will give you a better view to understand all the possible way of solving the problem instead of learning topicwise which will already tell you which approach to choose.
@@ -36,3 +36,84 @@ Contest 1: Very Basic Practice
 6. isUpper , isAlpha , toLower , toUpper rather than ascii conversion
 7. When value is not needed just the decision is needed log can be used for large values
 ```
+
+
+## 2 July 2023
+
+sovled problem from 1.1 [Practice] Introduction to Competitive Programming
+Contest 2: Loops Practice
+```
+1. Avoid using long long int when not needed
+2. Keep check for tle constrains
+3. Always check for lema in case of large constrains . Generate hadnwrittern solves and find the pattern from there
+4. Use bitwise where possible for faster execution . For finding base 2 use log2
+5. Keep in check for worst case . Calculate problems solution for worst case if mind is emtpy then do bruteforces then try to find pattern and then try to find the solution with efficient algo
+6. Keep an eye for perfection 
+7. Use stl when possible
+```
+```cpp
+
+vector<bool> mark(1000000, true);
+vector<int> primes;
+
+void sieve(int n)
+{
+
+    mark[0] = mark[1] = false; // 0 , 1 is not prime
+
+    for (int i = 4; i <= n; i += 2) // even numbers are not prime
+        mark[i] = false;
+
+    primes.push_back(2); // 2 is prime
+
+    for (int i = 3; i <= n; i += 2)
+    {
+        if (mark[i])
+        {
+            primes.push_back(i); // i is prime
+
+            if (i * i <= n + 2)
+            {
+                for (int j = i * i; j <= n; j += i * 2) // cutt off all the multiples of i
+                    mark[j] = false;
+            }
+        }
+    }
+}
+```
+
+ 
+```cpp
+/* 
+For doing prime factorization also can be used for finding disticnt prime divisors count
+
+*/
+int numberOfPrime(int n)
+{
+    int primeCount = 0;
+
+    for (int i = 0; i < primes.size(); i++)
+    {
+        //cnt++;
+        int prime = primes[i];
+        if (n % prime == 0)
+        {
+            primeCount++;
+            while (n % prime == 0)
+            {
+                n /= prime;
+                //cnt++;
+            }
+        }
+        if (n <= 1)
+            break;
+    }
+
+    return primeCount;
+}
+
+
+```
+ 1. Double and pow might give precision issues have to be careful to use them
+ 2. int can hold upto 2* 10^9 and long long int can hold upto 9*10^18
+ 3. Whenever using double loops always check for i , j are written properly
