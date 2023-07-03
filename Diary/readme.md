@@ -136,3 +136,8 @@ Well took the class of warm up 3 solved porblems for function and recursion.
     cin.tie(NULL);
 ```
 
+## 4 July 2023
+`F. Eating Candies cf rating 1100` used suffix and prefix sum to solve the problem. The problem could be sovled using binary search as I could clearly see a monotonic function. But I was not able to implement it. I have to practice more on binary search. So chose to implement it using map to find out if a number occurs twice and as it was in linear time it got solved .
+
+Currently sovling problems from cftracker.
+
