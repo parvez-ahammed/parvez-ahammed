@@ -117,3 +117,22 @@ int numberOfPrime(int n)
  1. Double and pow might give precision issues have to be careful to use them
  2. int can hold upto 2* 10^9 and long long int can hold upto 9*10^18
  3. Whenever using double loops always check for i , j are written properly
+
+ 
+## 3 July 2023
+
+Well took the class of warm up 3 solved porblems for function and recursion.
+
+1. 0 %2 = 0
+2. Using dp in fibonacci reduces the time complexity from exponential to linear from 2 second to 2ms using dp
+```cpp
+// For getting total time elapsed in code
+  cerr << "\n\n\n"<< (float)clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+```
+
+```cpp
+// For fast io
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+```
+
