@@ -141,3 +141,8 @@ Well took the class of warm up 3 solved porblems for function and recursion.
 
 Currently sovling problems from cftracker.
 
+```
+!!!!!!!!!! Solved my first ever bit releated problem of rating 1300 !!!!!!!!!!
+```
+## [Maximal AND](https://codeforces.com/contest/1669/problem/H)
+
