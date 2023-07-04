@@ -12,7 +12,7 @@
 | 20   | 1.Solved Leetcode(neetcode array) , cf(string 1000 , contest) , atcoder(easy)                                | 1. [Q]                                                                                                                                                                                                                        |
 | 21   | 1.Solved Leetcode(Neetcode stack) , atcoder(easy)                                                            | 1. [Q]                                                                                                                                                                                                                        |
 
-## 1 July 2023
+# 1 July 2023
 
 So today I started the day watching video [this]() video. Point I found useful
 
@@ -36,7 +36,7 @@ Contest 1: Very Basic Practice
 7. When value is not needed just the decision is needed log can be used for large values
 ```
 
-## 2 July 2023
+# 2 July 2023
 
 sovled problem from 1.1 [Practice] Introduction to Competitive Programming
 Contest 2: Loops Practice
@@ -118,7 +118,7 @@ int numberOfPrime(int n)
 2.  int can hold upto 2* 10^9 and long long int can hold upto 9*10^18
 3.  Whenever using double loops always check for i , j are written properly
 
-## 3 July 2023
+# 3 July 2023
 
 Well took the class of warm up 3 solved porblems for function and recursion.
 
@@ -136,7 +136,7 @@ Well took the class of warm up 3 solved porblems for function and recursion.
     cin.tie(NULL);
 ```
 
-## 4 July 2023
+# 4 July 2023
 
 `F. Eating Candies cf rating 1100` used suffix and prefix sum to solve the problem. The problem could be sovled using binary search as I could clearly see a monotonic function. But I was not able to implement it. I have to practice more on binary search. So chose to implement it using map to find out if a number occurs twice and as it was in linear time it got solved .
 
@@ -206,4 +206,76 @@ int query(int v, int tl, int tr, int l, int r)
     int tm = (tl + tr) / 2;
     return max(query(v * 2, tl, tm, l, min(r, tm)), query(v * 2 + 1, tm + 1, tr, max(l, tm + 1), r));
 }
+```
+
+# 5 July 2023
+
+## Binary lifting
+```
+You are given a tree with n nodes numbered from 0 to n - 1 in the form of a parent array parent where parent[i] is the parent of ith node. The root of the tree is node 0. Find the kth ancestor of a given node. 
+```
+### [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/)
+
+```
+1. Solving approach
+Well the first thing I could asume was that I could easily run a dfs to the parent bu again there ar Q queries so doing brute force will just give me cute tle . Now big bro Errichto came to enlighten me with his concept of binary lifting . 
+
+19 -> 10011 so we can basically get 19 by adding up 16+2+1 . in the same way we can just do jumps in power of two to reach that level of anecstor now this wil always be possible because every number can be represented as a sum of power of two . 
+
+So for that each bit that is turned on we will jump upto that level if that is possible. This idea of jumping from one node two another node in power of two is known as binary lifting.
+
+So to do binary lifting we will have to pre process the tree and store the 2^i th ancestor of each node in a dp array . Then we can just jump to the kth ancestor of a node by using the dp array.
+
+
+```
+
+```cpp
+class TreeAncestor {
+
+    vector < vector <int>> up;
+    vector < int > depth;
+    int LOG  = 20;
+public:
+    TreeAncestor(int n, vector<int>& parent) {
+         
+          up = vector < vector <int >> (n , vector<int>(LOG));
+          depth = vector <int>(n);
+      
+          parent[0] = 0;
+
+        // finding the parent of node v and keeping it in the first indice
+          for (int i = 0 ; i < n ; i++) up[i][0] = parent[i];
+
+          for (int i= 0 ; i < 100 ;i++)
+            {
+                for(int j = 1; j < n ; j++)
+                    depth[j] = depth[parent[j]] +1;
+            }
+
+          for (int j  = 1 ; j  < LOG ; j++)
+          {
+              // counting rest of the possible jumps from that point in the power of 2 2^1 , 2^2 , 2^2
+             
+              for (int i = 0 ; i < n  ; i++){
+                 up[i][j] = up [ up[i][j-1] ] [j-1];
+               } 
+
+          }
+
+    }
+  
+    
+    int getKthAncestor(int node, int k) {
+        if (depth[node] < k) 
+            return -1;
+
+        for (int i = 0 ; i < LOG ;i++)
+        {
+            if (k &(1<<i))
+                node = up[node][i];
+        }
+
+        return node;
+    }
+};
 ```
