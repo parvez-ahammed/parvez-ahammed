@@ -279,3 +279,9 @@ public:
     }
 };
 ```
+### TLE solution
+
+[Kuriyama Mirai's Stones](https://codeforces.com/contest/433/submission/212149836) This submission has only one issue instead of passing reference to the vector in the function I was passing the whole vector which was basicaly copying the whole vector that took some additional time and gave me tle . 
+```
+ALWAYS TRY TO PASS REFERENCE TO A FUNCTION INSTEAD OF PASSING THE WHOLE VECTOR
+```
