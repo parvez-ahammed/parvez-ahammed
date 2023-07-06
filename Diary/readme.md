@@ -51,6 +51,10 @@ Contest 2: Loops Practice
 7. Use stl when possible
 ```
 
+
+<details>
+<summary> sieve</summary>
+
 ```cpp
 
 vector<bool> mark(1000000, true);
@@ -81,6 +85,10 @@ void sieve(int n)
     }
 }
 ```
+
+</details>
+
+
 
 ```cpp
 /*
@@ -285,3 +293,278 @@ public:
 ```
 ALWAYS TRY TO PASS REFERENCE TO A FUNCTION INSTEAD OF PASSING THE WHOLE VECTOR
 ```
+
+
+# 6 July 2023
+
+
+
+## XOR properties
+```
+1. XOR of a number with itself is 0
+2. XOR of a number with 0 is the number itself
+3. XOR is commutative and associative
+4. XOR of a even number and successive odd number is always 1
+5. As xor of two same number is zero this property can be used to find the missing number in an array if it is said that all number comes in pair except one
+6. As xor from 1 to n can be found using constant time this property can be used to find xor in a given consecutive range
+```
+## Finding missing number from an array using xor
+<details>
+<summary> code </summary>
+
+```cpp
+// problem link https://www.spoj.com/problems/OLOLO/en/
+#include <bits/stdc++.h>
+using namespace std;
+
+int32_t main()
+{
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n ,ans = 0, x = 0;
+    
+    cin >> n;
+
+    // here x = 0 as xor of a number with 0 is the number itself
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> x;
+        // finding xor of the array
+        ans ^= x;
+    }
+
+    // why this ? its done in consant space and time complexity
+    /*
+    test case  :
+        7
+        2 4 6 4 2 2 2
+
+        output : 6
+
+        2^4^6^4^2^2^2 = 6
+
+        we can get a better view if we sort them  just to understand it 
+
+        2 2 2 2 4 4 6
+
+        so we can see that 2 and 4 comes in pair but 6 is left alone so we can find it using xor
+
+        in binary  they are 
+
+        010
+        010
+        010
+        010
+        100
+        100 --> upto this level we can see that they are coming in pair so we can just xor them and get 0
+        110
+
+    */
+
+    cout << ans << endl;
+    return 0;
+}
+```
+
+</details>
+
+
+## Finding XOR in range 0< l <= r <= 1e12
+<details>
+<summary> Code  </summary>
+    
+```cpp
+// https://atcoder.jp/contests/abc121/tasks/abc121_d?lang=en
+ll xor0toN(ll n)
+{
+    ll ans = 0;
+    while (n >= 0 and n % 4 != 3)
+    {
+        ans ^= n;
+        n--;
+    }
+    return ans;
+}
+
+ll xor_l_to_r(ll l, ll r)
+{
+    return ((l > 0 ? xor0toN(l - 1) : 0) ^ xor0toN(r));
+}
+
+/* the idea is to find xor from 0 to l-1 and xor from 0 to r and then xor them to get the xor from l to r
+
+now the question is how to find xor from 0 to n in constant time as it can be in worst case 1e12
+we can observe a pattern here that
+
+we can observe an pattern here that
+
+1^2 =1  3^4= 1  5^6 = 1 7^8 = 1
+
+so it is basically XOR of an even and successive odd number is always 1 . now we can look a bit deeper
+
+[(1^2 =1)  ^ (3^4= 1) = 0 ]  [(5^6 = 1) ^ (7^8 = 1) = 0] so for each 4 block we are getting 0 now we gotta find the last block which is not 4 
+so for that we are iterating backword till we hit the end of the last block end because then we know when the block ends it will always be 0 . so we can just xor the last block with the block before it and get the answer
+
+A detailed explanation can be found in 
+https://www.geeksforgeeks.org/find-xor-of-numbers-from-the-range-l-r/
+
+ */
+
+
+```
+</details>
+
+
+```
+1. To find sum in a range in an constant array we can use prefix sum array to find sum from l to r in constant time we can just do prefix[r] - prefix[l-1] to get the sum in that range the code must handle the case of l = 0 as prefix[-1] will give error
+
+2. Passing reference to a function instead of passing the whole vector can save a lot of time and space as passing the whole vector will copy the whole vector and that will take a lot of time and space
+
+3. Right shift operator can be used to divide a number by 2 as it is faster than dividing it by 2
+
+4. Left shift operator can be used to multiply a number by 2 as it is faster than multiplying it by 2
+
+5.Using next_permutation() we can find the next permutation of a string or a vector in lexicographically order
+
+
+```
+
+## Given an integer N . Find the number of digits in N in the base k
+<details>
+<summary> Solution </summary>
+
+```cpp
+// https://atcoder.jp/contests/abc156/tasks/abc156_b?lang=en
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    cout << floor(log2(n) / log2(k)) + 1 << endl;
+    return 0;
+}
+
+/*
+    the idea is to find the log of n in base k and then add 1 to it to get the number of digits in n in base k
+    log(n) base k = log(n) / log(k)
+    floor(log(n) base k) + 1 = number of digits in n in base k
+
+    why floor ? because log(n) base k can be a decimal number  wehen n is a power of k or logn is divisble by logk and we need to round it down to get the number of digits  
+*/
+```
+</details>
+
+
+## KMP
+<details>
+<summary> Code </summary>
+
+```cpp
+VI computeLPSArray(string pat, VI lps)
+{
+    int len = 0;
+    lps[0] = len;
+    int i = 1;
+
+    while (i < pat.size())
+    {
+        if (pat[len] == pat[i])
+            ++len, lps[i] = len, i++;
+        else
+            len != 0 ? (len = lps[len - 1]) : (lps[i] = len, i++);
+    }
+
+    return lps;
+}
+
+int KMPSearch(string txt, string pat)
+{
+    int PAT_SIZE = pat.size();
+    int TXT_SIZE = txt.size();
+
+    VI lps(PAT_SIZE, 0);
+
+    lps = computeLPSArray(pat, lps);
+
+    int count = 0;
+
+    int i = 0;
+    int j = 0;
+    while ((TXT_SIZE - i) >= (PAT_SIZE - j))
+    {
+        if (pat[j] == txt[i])
+        {
+            j++;
+            i++;
+        }
+
+        if (j == PAT_SIZE)
+        {
+            count++;
+            j = lps[j - 1];
+        }
+
+        else if (i < TXT_SIZE && pat[j] != txt[i])
+        {
+            if (j != 0)
+                j = lps[j - 1];
+            else
+                i++;
+        }
+    }
+
+    return count;
+}
+```
+</details>
+
+## RABIN KARP
+<details>
+<summary> Code </summary>
+
+```cpp
+
+ll hashValue(char c)
+{
+    return ((c - 'a' + 1) * 7);
+}
+
+int RABIN_KARP(string text, string pat)
+{
+
+    ll desiredHash = 0, currentHash = 0;
+
+    int M = pat.size();
+    int N = text.size();
+
+    for (int i = 0; i < M; i++)
+        desiredHash += hashValue(pat[i]);
+
+    for (int i = 0; i < M; i++)
+        currentHash += hashValue(text[i]);
+
+    int i = 1;
+
+    int count = 0;
+    string ans = text.substr(i - 1, M);
+    while (i <= (N - M + 1))
+    {
+
+        if (currentHash == desiredHash && ans == pat)
+            count++;
+
+        currentHash -= hashValue(text[i - 1]);
+        currentHash += hashValue(text[i + M - 1]);
+        ans.erase(ans.begin());
+        ans += text[i + M - 1];
+
+        i++;
+    }
+
+    return count;
+}
+```
+</details>
+
+
