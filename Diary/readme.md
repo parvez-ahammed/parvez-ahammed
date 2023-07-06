@@ -567,4 +567,9 @@ int RABIN_KARP(string text, string pat)
 ```
 </details>
 
+## Random facts 
+```
+1. 1!  = 1 , 2! = 2 , 3! = 6 , 4! = 24 , 5! = 120 , 6! = 720  from now on each factorial will end with 0 and if when such a case arrive after that each factorial will have a 0 at the end we can use this property to find out b! / a! where b > a and 0<= a <= b <= 1e18 .  We can optimize it a bit considering the fact that to calculate b! / a! we can just calculate (b * b-1 * b-2 ... a+1) [problem](https://codeforces.com/contest/869/submission/212370670)
+```
+
 
