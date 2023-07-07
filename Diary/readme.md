@@ -566,10 +566,17 @@ int RABIN_KARP(string text, string pat)
 }
 ```
 </details>
-
+# 7 July 2023
 ## Random facts 
 ```
 1. 1!  = 1 , 2! = 2 , 3! = 6 , 4! = 24 , 5! = 120 , 6! = 720  from now on each factorial will end with 0 and if when such a case arrive after that each factorial will have a 0 at the end we can use this property to find out b! / a! where b > a and 0<= a <= b <= 1e18 .  We can optimize it a bit considering the fact that to calculate b! / a! we can just calculate (b * b-1 * b-2 ... a+1) [problem](https://codeforces.com/contest/869/submission/212370670)
 ```
 
+# 8 July 2023
 
+Well saw some videos about dynamic programming from luv and there he discussed about some problems. The main thing i captured was the defination of dp I can go top to bottom or I can go bottom to top. <br>
+now in top to bottom we mainly use recursion and we try to decompose the main problem into some simmilar smaller problems. Now while we are claculating a problem we try to store that in a place so that the repetative work gets cancelled out.so that we can just focus on new things. 
+consider it with an example.  Suppose you are a traveller and now are travelling to sikkim so for the first time when you will be going there you will obviously not know where to start from or how to get there so you ask a lot of queztion to everyone and finally create a map and list of info about the details and you complete a happy sikkim trip. 
+now after a year you are agin going to sikkim. Now what will happen? If you are not an dummy traveller like me you have probably listed all the details about your previous trip and you are ready to go.  However if you did not then you would have to do the same processs again to gather information. So we memorize things or steps and try not to repeat same things twice. This thing in prohramming can be reffered as memoization that you memorize a certain things. 
+
+Now you need to go to sikkim but you have again forgot the route. But you havent forgotten the full details you know how to go to shiliguri from dhaka. won't you use this information? just because you dont know the whole route?  Well you will and you should use as much previous knowledge as possible to do less things and do nee things only when required.  so once you arrive shiliguri you can just do a little bit of work to go to shiliguri. In such way we can use dynamic programming. So that's easy? He He easy to say easy to code, tough to understand the problem! best of luck!
