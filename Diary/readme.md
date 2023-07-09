@@ -580,3 +580,6 @@ consider it with an example.  Suppose you are a traveller and now are travelling
 now after a year you are agin going to sikkim. Now what will happen? If you are not an dummy traveller like me you have probably listed all the details about your previous trip and you are ready to go.  However if you did not then you would have to do the same processs again to gather information. So we memorize things or steps and try not to repeat same things twice. This thing in prohramming can be reffered as memoization that you memorize a certain things. 
 
 Now you need to go to sikkim but you have again forgot the route. But you havent forgotten the full details you know how to go to shiliguri from dhaka. won't you use this information? just because you dont know the whole route?  Well you will and you should use as much previous knowledge as possible to do less things and do nee things only when required.  so once you arrive shiliguri you can just do a little bit of work to go to shiliguri. In such way we can use dynamic programming. So that's easy? He He easy to say easy to code, tough to understand the problem! best of luck!
+
+# 9 July 2023
+learned nothing new saw some podcasts of errichto and mock interview related question from youtube 
