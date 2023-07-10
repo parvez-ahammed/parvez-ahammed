@@ -566,10 +566,36 @@ int RABIN_KARP(string text, string pat)
 }
 ```
 </details>
+
 # 7 July 2023
 ## Random facts 
 ```
 1. 1!  = 1 , 2! = 2 , 3! = 6 , 4! = 24 , 5! = 120 , 6! = 720  from now on each factorial will end with 0 and if when such a case arrive after that each factorial will have a 0 at the end we can use this property to find out b! / a! where b > a and 0<= a <= b <= 1e18 .  We can optimize it a bit considering the fact that to calculate b! / a! we can just calculate (b * b-1 * b-2 ... a+1) [problem](https://codeforces.com/contest/869/submission/212370670)
+```
+
+
+
+## Data Structure - Beginner (BACS-BUBT National Programming Camp, 2017)
+
+### Given a string find out which characters occur odd times in the stirng without using any extra space
+
+<details>
+<summary> Solution </summary>
+
+```
+The idea is to use a bit mask to store the occurence of the characters in the string . We can use the fact that if we xor a number with itself it will become 0 . So each time a character occurs we can just toggle the bit and at the end we will be left with the bit mask of the characters that occured odd times in the string . We can then iterate over the string and check which characters have the bit mask set to 1 and print them out . 
+```
+
+</details>
+
+
+### [UVA 540](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=481)
+```
+This problem demonestrates use of 2d queue . Where we weill use a 2d queue to store the ids of team in a certains indexes queue
+```
+### [UVA 12207 Yet another queue]()
+```
+Use of dequeue or queue to solve the problem
 ```
 
 # 8 July 2023
@@ -596,7 +622,9 @@ You can find more about this from here https://math.stackexchange.com/questions/
 Sample code is given below
 ```
 <details>
-    <summary> From a place x ,y all posssible moves value of a bishop including the current place </summary>
+
+<summary> From a place x ,y all posssible moves value of a bishop including the current place </summary>
+ 
 ```cpp
 // https://codeforces.com/contest/1676/problem/D
 ll getVal(int x , int y , vector <vector<int>> &v)
@@ -613,4 +641,16 @@ ll getVal(int x , int y , vector <vector<int>> &v)
 }
 
 ```
+
 </details>
+
+
+# 11 July 2023
+
+## Random Facts
+```
+ 1. Each time a map is accessed randomly it alocates a new memory and stores the value there . So if we are using a map in a loop and we are not sure about the size of the map we can use a map.clear() to clear the map and free the memory . This will help us to avoid memory limit exceeded error . If we do ignore this we migh ecnounter a memory limit exceeded error . Like this 
+ (https://codeforces.com/contest/1676/submission/213180728) . Here we are acessing 1 to 1e9 and each time we are checkign the value in the map which is also assigning 0 value in that position which is causing mle before it is giving us tle that why I was getting mle thanks to fatin for pointing it out.
+ 
+```
+
