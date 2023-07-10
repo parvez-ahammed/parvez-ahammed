@@ -588,3 +588,29 @@ learned nothing new saw some podcasts of errichto and mock interview related que
 
 # 10 July 2023
 Another unproductive day with no real progress
+## Random Facts
+```
+1. Bishop move is only valid if `(abs(x - i) == abs(y - j) && abs(y - j) > 0)` . In some cases this can be furthre modified to `(abs(x - i) == abs(y - j) && abs(y - j) >= 0)` which means that the current place of the bishop is also countable . Else it will be valid only if  a bishop is traveling from (x1,y1) to (x2,y2)
+.This move is legal on an empty board if you have that: |x2−x1|=|y2−y1|>0 
+You can find more about this from here https://math.stackexchange.com/questions/1566115/formula-that-describes-the-movement-of-a-bishop-in-chess
+Sample code is given below
+```
+<details>
+    <summary> From a place x ,y all posssible moves value of a bishop including the current place </summary>
+```cpp
+// https://codeforces.com/contest/1676/problem/D
+ll getVal(int x , int y , vector <vector<int>> &v)
+{
+    ll ans = 0;
+    rep(0 , v.size())
+    {
+        for (int j = 0 ; j < v[i].size() ; j++)
+        {
+            abs(x - i) == abs(y - j) && abs(y - j) >= 0 ? ans += v[i][j] : ans += 0;
+        }
+    }
+    return ans;
+}
+
+```
+</details>
