@@ -654,3 +654,14 @@ ll getVal(int x , int y , vector <vector<int>> &v)
  
 ```
 
+# 16 July 2023
+
+## SQRT Decomposition
+
+Well suppose there is a given array of size n and there can be two operation . 
+1. Show the sum from l to r
+2. Update value at a certain index 
+
+So in such case the bruteforce way is to find the sum again and again which is not feasible in worst cases as in worst case it will be n^2 . Then we can solve it using segment tree . We can also do it by sqrt decomposition . What is this new term now ? <br>
+
+
