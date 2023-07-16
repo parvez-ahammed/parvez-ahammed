@@ -665,3 +665,32 @@ Well suppose there is a given array of size n and there can be two operation .
 So in such case the bruteforce way is to find the sum again and again which is not feasible in worst cases as in worst case it will be n^2 . Then we can solve it using segment tree . We can also do it by sqrt decomposition . What is this new term now ? <br>
 
 
+## Custom Comparator 
+
+Sometimes we may need to use custom comparator operator to do some sorting in such cases we can always use a custom comparator . Suppose we have a vector of pair and we want to sort it in a certain way . Then we can use a custom comparator to do that .
+
+<details>
+<summary>Code </summary>
+
+```cpp
+
+// Given n points in a two dimensional space, sort all the points in ascending order.
+
+// (x1, y1) > (x2, y2) if and only if (x1 > x2) or (x1 == x2 and y1 < y2) 
+bool cmp(pair<int, int> a, pair<int, int> b)
+{
+    return (a.first > b.first) or (a.first == b.first && a.second < b.second);
+}
+
+void solve()
+{
+   
+    vector < pair < int , int >>  v;
+    sort(v.begin(), v.end(), cmp);
+
+}
+
+
+```
+</details>
+
