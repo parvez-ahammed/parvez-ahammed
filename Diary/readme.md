@@ -694,3 +694,7 @@ void solve()
 ```
 </details>
 
+
+# 18 July 2023
+
+Solved codeforces 640 div 4's 1500 rated problem 
