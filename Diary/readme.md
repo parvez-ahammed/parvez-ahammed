@@ -664,6 +664,14 @@ Well suppose there is a given array of size n and there can be two operation .
 
 So in such case the bruteforce way is to find the sum again and again which is not feasible in worst cases as in worst case it will be n^2 . Then we can solve it using segment tree . We can also do it by sqrt decomposition . What is this new term now ? <br>
 
+So the idea is to divide the array into several pieces and keep track of the sum of each piece. So if we have an array of size 10 we can divide them into 3/4 part and keep track of the sum of each part . So if we want to find the sum from 1 to 5 we can just find the sum of the first part and the last part and then iterate over the middle part and add them up . So this will be sqrt(n) + sqrt(n) + sqrt(n) = 3sqrt(n) . So this is better than n^2 but not as good as segment tree . But the good thing is that it is easier to implement than segment tree . So if we have a problem where we need to find the sum of a range and update a value at a certain index we can use sqrt decomposition .
+
+So in which size we will be partitioning the array ? Given size of n we can set each size to size of sqrt of n . in such way last part may not always be fully filled up unless the size is a square number. So we can just keep track of the size of the last part and then iterate over the last part to find the sum .
+
+So how to update a value ? Well we can just find the part where the value is and then update the value in that part and then update the sum of that part .
+
+So how to find the sum ? Well we will here have threee part  In the first part we will find th sum of the first part as the l may not always be the start of our partition . The middle part will 
+
 
 ## Custom Comparator 
 
@@ -698,3 +706,37 @@ void solve()
 # 18 July 2023
 
 Solved codeforces 640 div 4's 1500 rated problem 
+
+
+# 19 July 2023
+
+## Kadanes Algorithm
+
+Kadanes algorithm is used to find the maximum sum of a subarray . So suppose we have an array of size n and we want to find the maximum sum of a subarray . So we can just iterate over the array and keep track of the maximum sum of a subarray . So how to do that ? Well we can just iterate over the array and keep track of the maximum sum of a subarray . So if we are at a certain index we can just check if the sum of the previous subarray is greater than 0 or not . If it is greater than 0 then we can just add the current value to the sum and update the maximum sum . Else we can just update the sum to the current value . So in such way we can find the maximum sum of a subarray .
+
+<details>
+<summary>Code </summary>
+
+```cpp
+
+int maxSubArray(vector<int>& nums) {
+        int sum = 0;
+        int maxSum = INT_MIN;
+        for(int i = 0 ; i < nums.size() ; i++)
+        {
+            sum = max(sum + nums[i] , nums[i]);
+            maxSum = max(maxSum , sum);
+        }
+        return maxSum;
+    }
+
+```
+</details>
+
+## Random Facts
+    
+```
+    1. If we are using a map and we are not sure about the size of the map we can use a map.clear() to clear the map and free the memory . This will help us to avoid memory limit exceeded error . If we do ignore this we migh ecnounter a memory limit exceeded error . Like this
+    2. Keep check for size of n to get a idea about the solving technique . If n is small then we can use brute force . If n is large then we can use some other technique . Today solved a cf Question https://codeforces.com/contest/550/submission/214458722 here I ignored the size of n and couldnot come up with a solution at first then seing at the size of n I could come up with with bitmask solution.
+    3. In cc contest well try to implement bruteforce first and then try to optimize it . I was close but lacked the experience.
+```
