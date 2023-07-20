@@ -710,7 +710,7 @@ Solved codeforces 640 div 4's 1500 rated problem
 
 # 19 July 2023
 
-## Kadanes Algorithm
+## Maximuum Array Sum (Kadanes Algorithm)
 
 Kadanes algorithm is used to find the maximum sum of a subarray . So suppose we have an array of size n and we want to find the maximum sum of a subarray . So we can just iterate over the array and keep track of the maximum sum of a subarray . So how to do that ? Well we can just iterate over the array and keep track of the maximum sum of a subarray . So if we are at a certain index we can just check if the sum of the previous subarray is greater than 0 or not . If it is greater than 0 then we can just add the current value to the sum and update the maximum sum . Else we can just update the sum to the current value . So in such way we can find the maximum sum of a subarray .
 
@@ -740,3 +740,29 @@ int maxSubArray(vector<int>& nums) {
     2. Keep check for size of n to get a idea about the solving technique . If n is small then we can use brute force . If n is large then we can use some other technique . Today solved a cf Question https://codeforces.com/contest/550/submission/214458722 here I ignored the size of n and couldnot come up with a solution at first then seing at the size of n I could come up with with bitmask solution.
     3. In cc contest well try to implement bruteforce first and then try to optimize it . I was close but lacked the experience.
 ```
+
+# 20 July 2023
+
+## Maximuum Array Sum (Prefix Sum)
+
+Before I learned about how to find the maxiumum subarray sum using kadanes algorithm . Today I will talking about doing the same with the help of prefix sum . Now first of all what is prefix sum ?  in prefix sum we will be calculating the sum of all previous values in an array which is known as prefix array . Let us see an example below 
+
+```
+Main array = [ 1,2,3,-7,5,6,7]
+Prefix Array = [ 1, 3, 6 , -1 ,4 ,10 , 17]
+```
+
+So once we are done calculating the prefix array which can be done in O(n) we will be iterating over the array and for each a[i] we will subtract the min till a[i-1] from a[i] and take the maximum from this result . Which is a greedy approach in solving the problem this can be done in O(n)  . We initialize the minimum with 0 . Lets look at an exapmle below .
+
+```
+Prefix Array = [ 1, 3, 6 , -1 ,4 ,10 , 17]
+i = 6;
+min until a[5] = -1;
+a[6] = 17
+a[i] - in until a[i-1]
+= 17 - (-1)
+= 18 
+
+```
+So the answer will be 18  and we can get the answer by adding `5+6+7 = 18` 
+
