@@ -710,12 +710,12 @@ Solved codeforces 640 div 4's 1500 rated problem
 
 # 19 July 2023
 
-## Maximuum Array Sum (Kadanes Algorithm)
+## Maximum SubArray Sum (Kadanes Algorithm)
 
 Kadanes algorithm is used to find the maximum sum of a subarray . So suppose we have an array of size n and we want to find the maximum sum of a subarray . So we can just iterate over the array and keep track of the maximum sum of a subarray . So how to do that ? Well we can just iterate over the array and keep track of the maximum sum of a subarray . So if we are at a certain index we can just check if the sum of the previous subarray is greater than 0 or not . If it is greater than 0 then we can just add the current value to the sum and update the maximum sum . Else we can just update the sum to the current value . So in such way we can find the maximum sum of a subarray .
 
 <details>
-<summary>Code </summary>
+<summary> COde </summary>
 
 ```cpp
 
@@ -743,7 +743,7 @@ int maxSubArray(vector<int>& nums) {
 
 # 20 July 2023
 
-## Maximuum Array Sum (Prefix Sum)
+## Maximum  Sub-Array Sum (Prefix Sum)
 
 Before I learned about how to find the maxiumum subarray sum using kadanes algorithm . Today I will talking about doing the same with the help of prefix sum . Now first of all what is prefix sum ?  in prefix sum we will be calculating the sum of all previous values in an array which is known as prefix array . Let us see an example below 
 
@@ -765,4 +765,26 @@ a[i] - in until a[i-1]
 
 ```
 So the answer will be 18  and we can get the answer by adding `5+6+7 = 18` 
+
+<details>
+<summary>Code</summary>
+
+```cpp
+
+ll maximumSubArraySum(vector<ll> prefix)
+{
+
+    ll ans = LLONG_MIN;
+    ll curr_min = 0;
+    for (int i = 1; i < prefix.size(); i++)
+    {
+        ans = max(ans, prefix[i] - curr_min);
+        curr_min = min(curr_min, prefix[i]);
+    }
+
+    return ans;
+}
+
+```
+</details>
 
