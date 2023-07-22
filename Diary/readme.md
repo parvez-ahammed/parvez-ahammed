@@ -788,3 +788,40 @@ ll maximumSubArraySum(vector<ll> prefix)
 ```
 </details>
 
+# 22 July 2023
+
+## Compression
+
+So suppose we have  1e5 number of nodes which can vary from 1 to 1e9 it will be bidirectional .Now how to take input for such large values ? in the traditional way we cant just create an adjency list because for such a case the size will be an issue and we will get an MLE . So what to do now ? We can just simply use a map to map each node with our desired number so 
+```
+ 1 10
+ 2 30
+ 40 3
+ 
+we can map each node like below
+
+1 1
+10 2
+2 3
+30 4
+40 5
+3 6
+
+```
+
+ In such a way we can map each node with a number and then we can just use the number to create the adjency list . But what if we have to do some dfs or bfs ? Well we can just use the same map to map each node with a number and then we can just use the number to do dfs or bfs . So in such way we can use dfs compression to solve the problem .
+
+ Also in another map or vector we can store the real node value of the number so that we can use it later .
+
+ ```
+ 1 1
+ 2 10
+ 3 2
+ 4 30
+ 5 40
+ 6 3
+ ```
+
+ We can achieve this by using any data structure like map or vector . THe same method can be applied when dealing with string and dfs
+
+Related problem can be found named "Ladder Takahashi" in atcoder
