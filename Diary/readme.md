@@ -825,3 +825,8 @@ we can map each node like below
  We can achieve this by using any data structure like map or vector . THe same method can be applied when dealing with string and dfs
 
 Related problem can be found named "Ladder Takahashi" in atcoder
+
+
+# 23 July 2023
+
+Created an Python AI game using min max algorithm in google collab.
