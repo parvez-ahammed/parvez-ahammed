@@ -830,3 +830,11 @@ Related problem can be found named "Ladder Takahashi" in atcoder
 # 23 July 2023
 
 Created an Python AI game using min max algorithm in google collab.
+
+# 24 July 2023
+
+Participated in codeforces div 2 contest solved B and did a satisfactory implementation of B . Rank 6563. Gave time debugging other peoples code in BCS
+
+# 25 July 2023
+
+Practiced recursion from codeforces
