@@ -837,4 +837,4 @@ Participated in codeforces div 2 contest solved B and did a satisfactory impleme
 
 # 25 July 2023
 
-Practiced recursion from codeforces
+Practiced recursion from codeforces , participated in div 3 solved 3 , not satisfactory 
