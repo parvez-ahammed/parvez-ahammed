@@ -838,3 +838,40 @@ Participated in codeforces div 2 contest solved B and did a satisfactory impleme
 # 25 July 2023
 
 Practiced recursion from codeforces , participated in div 3 solved 3 , not satisfactory 
+
+# 26 July 2023
+
+## Problem 
+
+Fatin and nafis are very good friends . They talk to each other every now and then and sometime people tries to interrupt them and they get angry . So they decided to create a secret language so that no one can understand the language and they can talk to each other freely.
+At first any one of them will say a word then he will say a big encrypted word using that line. The othre person will hear the keyword and the encrypted sentence and will decrypt it . Now yusha is a very talented you batchmate of them and he wants to know what they are talking about . So he figured out that the first word they say is the keyword and the encrypted sentence they say has some relation to it. He also found out that . They first write the keyword in a line and then they start writing the sentence in the next line but they never only write till the length of the keyword in a single line .
+
+# 28 July 2023
+ Worked on university c# project
+
+# 29 July 2023
+
+## Random Facts
+```
+1. How to find if a number has any odd divisor (greater than 1)?
+If a number has any odd divisor, it can be written as 2k+1 where k is a positive integer. So if we can find any odd divisor of n, we can conclude that n has odd divisor. So we can iterate from 3 to sqrt(n) and check if any number divides n. If we find any number, we can conclude that n has odd divisor. If we don’t find any number, we can conclude that n has no odd divisor.
+
+
+This is the way I thought of but this can be improved by using the fact that if a number has any odd divisor then it must have a prime odd divisor . So we can just iterate over the prime numbers and check if any prime number divides n . If we find any prime number then we can conclude that n has odd divisor . If we dont find any prime number then we can conclude that n has no odd divisor . This can be done in O(sqrt(n)) time complexity . 
+
+
+This can also be improved by just keep dividing the number  by 2 until getting an odd number.Either it’s 1 in which case the number is a power of 2 and has no other positive odd divisor, or it’s an odd divisor greater than 1 This is faster, Θ(log2n)
+
+The best way to do this is by taking the help of it binary representaion . The only possibility for any number n>1 not to have an odd divisor is for n to be a power of two. In binary representation, this means that the number has only one 1 bit and all other bits are 0
+i.e. 410=100,12810=1000000
+Another property: the number n−1 will have all ones
+i.e. 310=11,12710=111111
+but it will have one less digit than n . Thus, if we apply logical AND operation to n∧(n−1) , the result will be zero only if n
+is a power of two. This is just one line of code regardless of n.
+
+https://math.stackexchange.com/questions/4068562/how-to-find-if-a-number-has-any-odd-divisor-greater-than-1?newreg=0142613c6f2347a6a192bc2effb405c2
+
+
+
+```
+
