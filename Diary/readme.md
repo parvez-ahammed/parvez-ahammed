@@ -875,3 +875,11 @@ https://math.stackexchange.com/questions/4068562/how-to-find-if-a-number-has-any
 
 ```
 
+# 30 July 2023
+
+## Random Facts
+
+```
+1 . The maxmium gcd of two number between 1 to is n /2 . This can be proved by taking the example of 6 and 12 . The maximum gcd of 6 and 12 is 6 . So the maximum gcd of two number between 1 to n is n/2 .
+
+
