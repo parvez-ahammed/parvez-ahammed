@@ -72,7 +72,7 @@ void sieve(int n)
 
     for (int i = 3; i <= n; i += 2)
     {
-        if (mark[i])
+        if (!mark[i])
         {
             primes.push_back(i); // i is prime
 
@@ -882,4 +882,30 @@ https://math.stackexchange.com/questions/4068562/how-to-find-if-a-number-has-any
 ```
 1 . The maxmium gcd of two number between 1 to is n /2 . This can be proved by taking the example of 6 and 12 . The maximum gcd of 6 and 12 is 6 . So the maximum gcd of two number between 1 to n is n/2 .
 
+```
 
+# 31 July 2023
+
+ ## Count number of divisors from 1 to n using sieve in O(nlogn) time complexity
+
+```cpp
+
+int divisors[10000005];
+
+void countDivisorUsingSieve(int n)
+{
+
+    for (int i = 1; i <= n; i++)
+        for (int j = i; j <= n; j += i)
+            divisors[j]++;
+}
+
+```
+
+So in here what happeing is that we are iterating over all the numbers from 1 to n and then we are iterating over all the multiples of that number and then we are increasing the value of the divisors of that number by 1 . So in this way we can count the number of divisors of all the numbers from 1 to n in O(nlogn) time complexity .
+
+# 4 August 2023
+
+Been a lot busy for the last week paritcipated in contest , exhibition etc . Performed poorly in Carrnivals coding combat . 
+due to misuse of map hopefully wont repeat it again. TOday started with top and gave a virtual couldnt solve a 1400 rating problem in cf will be trying it  the next day . Will be starting solving toph and lightoj .
+# WARNING !!! ALWAYS USE MAP.COUNT()
