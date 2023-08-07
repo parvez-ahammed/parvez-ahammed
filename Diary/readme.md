@@ -913,3 +913,98 @@ due to misuse of map hopefully wont repeat it again. TOday started with top and 
 # 5 August 2023
 
 Participated in div2 codeforces . Sovled tree and dfs related problem . Used compression to do dfs on a tree . Didnt learn anything new apart from these hoping to get pupil.
+
+# 8 August 2020
+
+## BACS Game Theory 1
+
+# Universal Game Theory Logic
+
+```
+1. A state is winning if it can reach at least one losing position
+2. A state is losing if All the the states it can reach are winning states
+```
+
+If we analzye both the quotes what do they actually mean ?  In the first case if we can choose any move that will give the opponent such a position that he will be forced to lose no matter what move he makes only then we can be sure that the other can win . 
+
+In the second case suppose both of our choice leads to such a position that it offers the opponent a position from where if he makes the optimal move he will win then we can be sure that we will lose . Cause remember we are playing optimally .
+
+### Problem 1 
+
+Given a pile of N stones if 2 players move sequentially and can take 1 or 2 stone from the pile player with picking the last stone will win who will win if both of them play optimally ?
+
+### Solution 
+
+In such problems of where moves can be optimal we can just do a simple simulation and find out the winning player. So we can see a patter here that 
+
+for each n is 10 we can observe
+
+```
+0 -> 1st player cant make a move so 2nd player wins
+1 -> 1st player takes 1 stone so 2nd player cant make a move so 1st player wins
+2 -> 1st player takes 2 stone so 2nd player cant make a move so 1st player wins
+3 -> here observe no matter how much stone 1st player takes 2nd player can always take 1 or 2 stone and win so 2nd player wins
+4 -> 1st player wins
+5 -> 1st player wins
+6 -> 2nd player wins
+```
+
+so after each multiple of 3 it is repeating it self so we can do a simple mod operation here to solve the problem . We can mod the number by 2 to decide which player will win .
+
+```
+n % 3 == 0 -> 2nd player wins
+n % 3 == 1 -> 1st player wins
+n % 3 == 2 -> 1st player wins
+```
+
+### Problem 2
+
+A 2 player game starts with the number A= 1 . In each move a  player can multiply A with X (2<= X <= 9 ). First player to make A >= N wins . Who will win if both of them play optimally ?
+
+In here we can run a simulation again for N = 1000 and see the pattern . 
+
+So what can we find here ? Lets come from the opposie side to make 1000 what will be the minimum number required ? 
+
+`ceil(1000/9) = 112` 
+
+if the last player does a move that will give a number more than 112 we will win . So if we define the range 
+
+```
+1000 -> inf -> losing state
+112 -> 999  -> Winning state
+56  -> 111  -> Losing state
+7   -> 55   -> Winning state
+4   ->  6   -> Losing state
+1   ->  3   -> Winning state
+
+```
+
+### NIM Game
+
+Nim is a game where there are N piles of stones . In each move a player can take any number of stones from any pile . The player who takes the last stone wins . Who will win if both of them play optimally ?
+
+### Solution
+
+If we take the xor of all the piles and if the xor is 0 then the second player will win else the first player will win .
+
+```
+[2 , 5, 4]
+
+2 ^ 5 ^ 4 = 3
+
+[1 , 1 , 1]
+
+```
+
+So the first player will win here !
+
+
+```mermaid
+
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+
+```
