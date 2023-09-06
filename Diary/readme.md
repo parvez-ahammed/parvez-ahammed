@@ -957,6 +957,27 @@ n % 3 == 1 -> 1st player wins
 n % 3 == 2 -> 1st player wins
 ```
 
+```mermaid
+
+graph TD;
+    A6-->B5;
+    A6-->B4;
+    B5 -->C4;
+    B5 -->C3; 
+    B4-->D3;
+    B4-->D2;
+    D3-->E2;
+    D3-->E1;
+    E2-->F1;
+    E2-->F0;
+    E1-->G0;
+    D2-->G1;
+    D2-->H0;
+    G1-->I0;
+
+
+```
+
 ### Problem 2
 
 A 2 player game starts with the number A= 1 . In each move a  player can multiply A with X (2<= X <= 9 ). First player to make A >= N wins . Who will win if both of them play optimally ?
@@ -979,6 +1000,19 @@ if the last player does a move that will give a number more than 112 we will win
 
 ```
 
+
+## NIM
+
+Rule of NIM
+
+
+```
+1. Has to be impartial 
+2. Has to be finite
+3. Has to be optimal play
+4. Both the players have to play in turn 
+
+```
 ### NIM Game
 
 Nim is a game where there are N piles of stones . In each move a player can take any number of stones from any pile . The player who takes the last stone wins . Who will win if both of them play optimally ?
@@ -999,12 +1033,165 @@ If we take the xor of all the piles and if the xor is 0 then the second player w
 So the first player will win here !
 
 
-```mermaid
-
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+Then why does this trick work ?
 
 ```
+010
+101
+100
+
+111 <- XOR of everything
+```
+
+Now the interesting part is why does this trick work ? 
+
+```mermaid
+graph TD;
+    NZ-->Z;
+    NZ-->NZ;
+    Z-->NZ;
+
+``````
+
+Here Z means  that the sum of all piles of stonsess are zero and NZ means the xor is  non zero .
+
+ So what does the graph mean ? We can can see that from a Non zero state we can go to both Non Zero state and A zero state . But from a zero state we can only go to a non zero state. And this can be observed by looking  at the below example 
+
+ ```
+ 1 0 1 0 1
+ 0 1 1 0 1
+ 1 1 0 0 0
+
+ 0 0 0 0 0 <- XOR of everything
+ ```
+
+ Now here whatever moves we do we will end up messing up the current situation and we will end up to a non zero postion . 
+
+ So till now we are certain about two fact 
+1. From non zero state we can go to both non zero and zero state
+2. From zero state we can only go to non zero state
+
+
+So at the beginning of the game we calculate the current state of the game by doing the xor and find out if it is zero or not . If it is not zero then the first person playing can move it optimally and force the other person to a zero state . In this way he can ensure his victory .
+
+But if he is given a zero state then he can only move to a non zero state . So he can only mess up the current situation and force the other person to a zero state . So the other person will win .
+
+```
+Example of non zero state
+[1 , 0 ,4]
+001
+000
+100
+
+Example of zero state 
+[2,2]
+010
+010
+
+```
+
+Keep in mind we are referring here the starting state. 
+
+
+If we try to simulate the game the optimal strategy will be make a move which will offer the opponenent a zero state . And to do this  we can deduct any number of stones from any pile .
+
+Now how to choose the pile ?
+
+If we are currently in a non zero state we must choose the pile that has the highest bit set which is causing the xor to be non zero . 
+
+```
+[1 , 0 , 4]
+
+001
+000
+100
+
+We can take 3 stones from the 3rd pile to make it zero state . 
+
+
+001 
+000
+001
+
+Now the second person will try to make it a non zero state But he cant . So he will take 1 stone from the 3rd pile .
+
+001
+000
+000
+
+Now If the first person takes a stone from the first pile he wins
+
+Graphical representation of the game is given below
+
+```
+
+```mermaid
+graph LR;
+
+  001_000_100-->001_000_001;
+  001_000_001-->001_000_000;
+```
+
+
+### NIM GAME 2
+
+Now in here we are required to find the number of ways to win the game .
+
+### Solution
+
+We can use the same trick as before . We can find the xor of all the piles and if it is zero then the second player will win else the first player will win .
+
+Now we can find the number of ways to win the game by using the same trick as before . We can find the number of ways to make the xor zero . 
+
+So once we choose a pile then we have to deduct the rest of the stones from the same pile so the rest becomes deterministic only choosing the pile becomes the variable .
+
+In the first move we can find the first on bit and check which piles have the same bit set . Then we can choose any of the piles and deduct the rest of the stones from the same pile . In this way we can choose any pile meanning multiple ways.
+
+
+### Misere NIM
+Last player to pick a stone loses . Kind of opposite of the normal NIM game .
+
+### Solution
+
+If all the piles have only one stone and the number of pile is odd then the first player will lose . In every other cas it is just like nim game  meaning if the xor of all is non zero then the first player will win else the second player will win .
+
+
+
+### Problem 3 (Is it really a NIM game ?)
+
+1. Given n piles of stone where each stone is marked with a or b
+
+2. Player 1 can only select a pile whose topmost stone is marked with a 
+
+3. Player 2 can only select a pile whose topmost stone is marked with b
+
+4. After selecting a pile one can pick any number of stones from the top of the pile
+
+
+### Solution
+
+So if try to solve this game using the same trick as before we will find that it is not possible .  Now why it is not possible ? 
+
+
+Just think if there are multiple piles and some piles has a on top and some piles has b on top . Then can we really cal it a nim game ? Well we can't.
+
+```
+Nim game must be impartial . Meaning both the players must have the same set of moves . But in here the first player can only choose a and the second player can only choose b . So it is not impartial and we can not actually use the nim game trick here.
+```
+
+So what can we do ?
+
+We can apply a simple greedy approach. For each pile with a on top we can count the number of a on that pile and for each pile with b on top we can count number of b on top . This will give us the total amount of move one can make and whichever player can make more move will win the game. 
+
+
+### Bogus NIM
+
+1. Same as nim game
+2. But player one has a extra stone or player 2 has b extra stone
+3. They can add stones from a, b on any pile in a given time
+
+
+### Solution
+
+So the observation can be pretty simple . Because the additional stones can't effect the outcome of the game . So we can just ignore them and solve the game as a normal nim game .
+
