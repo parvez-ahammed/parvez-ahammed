@@ -1195,3 +1195,98 @@ We can apply a simple greedy approach. For each pile with a on top we can count 
 
 So the observation can be pretty simple . Because the additional stones can't effect the outcome of the game . So we can just ignore them and solve the game as a normal nim game .
 
+# 6 September 2023
+
+##  Plain binary search on indice
+
+Well it works in the most basic way and it is not universal so we will not be using it .
+
+```
+
+if (a[mid] == x)  return true; [ if the mid is the answer then return true]
+
+if (a[mid] > x) [ if mid is greater than we can discard the right part]
+    r = mid - 1;
+else [ if mid is smaller than we can discard the left part]
+    l = mid + 1;
+
+```
+
+
+```cpp
+
+bool binSearch(vector<int>& a, int x)
+{
+    int l = 0, r = a.size() - 1;
+
+    while (l <= r) {
+        int mid = (l + r) / 2;
+
+        if (a[mid] == x)
+            return true;
+
+        if (a[mid] > x)
+            r = mid - 1;
+        else
+            l = mid + 1;
+    }
+    return false;
+}
+    
+```
+
+## Closest to the right 
+
+```cpp
+int binSearchRight(vector<int>& a, int x)
+{
+    int l = -1; // a[l] < x
+    int r = a.size(); // a[r] >= x
+
+    while (r > l + 1) {
+        int m = (l + r) / 2;
+
+        if (a[m] < x)
+            l = m;
+        else
+            r = m;
+    }
+
+    return r;
+}
+
+```
+
+
+## Closest to the left 
+
+```cpp
+int binSearchLeft(vector<int>& a, int x)
+{
+    int l = -1; // a[l] <= x
+    int r = a.size(); // a[r] > x
+
+    while (r > l + 1) {
+        int m = (l + r) / 2;
+
+        if (a[m] <= x)
+            l = m;
+        else
+            r = m;
+    }
+
+    return l;
+}
+```
+
+So the `binSearchLeft` finds out the index which is less or equal than x and `binSearchRight` finds out the index which is  greater  greater than x .
+
+now if we are given a range and told to find the number of elements between that range we can just use the `binSearchLeft` and `binSearchRight` to find the number of elements between that range . 
+
+```cpp
+        int left = binSearchLeft(a, l - 1); // find the indice of the element which is less than the left range
+        int right = binSearchRight(a, r + 1); // find the indice of the element which is greater than the right range 
+
+        cout << right - (left + 1) << " "; // once we find the both indice we can just do subtract to find the result
+```
+[Submission] (https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/submission/222132779)
