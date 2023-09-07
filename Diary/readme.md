@@ -1240,19 +1240,21 @@ bool binSearch(vector<int>& a, int x)
 ```cpp
 int binSearchRight(vector<int>& a, int x)
 {
-    int l = -1; // a[l] < x
-    int r = a.size(); // a[r] >= x
+     int l = 1; // a[l] < x
+    int r = a.size() - 1; // a[r] >= x
 
-    while (r > l + 1) {
-        int m = (l + r) / 2;
+    int ans = r + 1;
 
-        if (a[m] < x)
-            l = m;
+    while (l <= r) {
+        int mid = (l + r) / 2;
+
+        if (a[mid] < x)
+            l = mid + 1;
         else
-            r = m;
+            ans = mid, r = mid - 1;
     }
 
-    return r;
+    return ans;
 }
 
 ```
@@ -1263,19 +1265,22 @@ int binSearchRight(vector<int>& a, int x)
 ```cpp
 int binSearchLeft(vector<int>& a, int x)
 {
-    int l = -1; // a[l] <= x
-    int r = a.size(); // a[r] > x
+     int l = 1; // a[l] <= x
+    int r = a.size() - 1; // a[r] > x
 
-    while (r > l + 1) {
-        int m = (l + r) / 2;
+    int ans = 0;
 
-        if (a[m] <= x)
-            l = m;
+    while (l <= r) {
+        int mid = (l + r) / 2;
+
+        if (a[mid] <= x)
+
+            ans = mid, l = mid + 1;
         else
-            r = m;
+            r = mid - 1;
     }
 
-    return l;
+    return ans;
 }
 ```
 
@@ -1284,9 +1289,5 @@ So the `binSearchLeft` finds out the index which is less or equal than x and `bi
 now if we are given a range and told to find the number of elements between that range we can just use the `binSearchLeft` and `binSearchRight` to find the number of elements between that range . 
 
 ```cpp
-        int left = binSearchLeft(a, l - 1); // find the indice of the element which is less than the left range
-        int right = binSearchRight(a, r + 1); // find the indice of the element which is greater than the right range 
-
-        cout << right - (left + 1) << " "; // once we find the both indice we can just do subtract to find the result
+       binSearchLeft(a, r) - binSearchLeft(a, l - 1) //  // number of elements having value <= x
 ```
-[Submission] (https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/submission/222132779)
