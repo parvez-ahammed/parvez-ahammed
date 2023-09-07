@@ -1332,3 +1332,31 @@ ll binSearch()
 ```
 [Submission](https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/submission/222145935)
 Here this is the basic binary binary search on answer algorithm .  The pointers will move according to the function . Here the function obviously have to be monotonic .
+
+## Binary Search on Answer with Floating Point Numbers
+
+```cpp
+
+// Everything will be same but instead of using integer we will be using double
+
+double l = 0, r = 1e7 + 9;
+ 
+    double ans = 0;
+ 
+    int iterations = 45; // iterations = log (maxAns / eps) where eps is the precision
+    // ideally this can be 100 just to be safe
+ 
+    while (iterations--) {
+ 
+        double mid = (l + r) / 2;
+ 
+        if (ok(v, mid)) {
+            ans = mid;
+            l = mid;
+        } else {
+            r = mid;
+        }
+    }
+
+```
+[Submission](https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/submission/222171571) Here we are using double instead of integer . And we are using a precision of 1e-6 . And we are running the loop for 45 times as log (1e7/1e-6) = 43 . SO to be safe we are using 45 .
