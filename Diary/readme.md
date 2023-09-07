@@ -1291,3 +1291,44 @@ now if we are given a range and told to find the number of elements between that
 ```cpp
        binSearchLeft(a, r) - binSearchLeft(a, l - 1) //  // number of elements having value <= x
 ```
+
+# 7 September 2023
+
+## Binary Search for Answer
+In real problems, this means that there is some function that determines whether it is good or bad by a number.
+
+```cpp
+// monotonic function
+bool ok(ll mid)
+{
+    ll a = (mid / w);
+    ll b = (mid / h);
+
+    if (b == 0) 
+        return false;
+    return a >= (double)n / b; // not multiplying due to overflow
+}
+ll binSearch()
+{
+
+    ll l = 1, r = 1e18;
+
+    ll ans = 0;
+
+    while (l <= r) {
+        ll mid = (l + r) / 2;
+
+        if (ok(mid)) {
+            ans = mid;
+            r = mid - 1;
+        } else {
+
+            l = mid + 1;
+        }
+    }
+
+    return ans;
+}
+```
+[Submission](https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/submission/222145935)
+Here this is the basic binary binary search on answer algorithm .  The pointers will move according to the function . Here the function obviously have to be monotonic .
