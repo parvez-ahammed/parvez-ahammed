@@ -1360,3 +1360,6 @@ double l = 0, r = 1e7 + 9;
 
 ```
 [Submission](https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/submission/222171571) Here we are using double instead of integer . And we are using a precision of 1e-6 . And we are running the loop for 45 times as log (1e7/1e-6) = 43 . SO to be safe we are using 45 .
+
+# 9 September 2023
+Solved problems related to binary search and gave one virtual contest .
