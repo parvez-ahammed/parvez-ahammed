@@ -1363,3 +1363,35 @@ double l = 0, r = 1e7 + 9;
 
 # 9 September 2023
 Solved problems related to binary search and gave one virtual contest .
+
+# 12 September 2023
+
+## Binary search to solve MiniMax Problem
+
+In general we can use binary search to solve minimax problem . So what is minimax problem ? 
+
+
+Minimax problem is a problem is generic kind of porblem when the task is to find the minimum value which is the maxium of some other values . This can also be opposite meaning we can also be asked to find out the maximum value which is the minimum of some other values . In both cases we can use think of binary search to solve the problem .
+
+## Problem 1
+
+Lets say there are n people living in a line and i'th lives in position xi and has a speed vi now they want to meet so where can they all meet where they can meet all meet at the minimum time .
+
+So lets come to the observation
+
+1. We can easily say that we need the minimum time so one part of the equation is actullay done . That there is an requirement for minimum number.
+
+2. Where is the requirement of the maximum number ? Well when can we say that every person has arrived to the spot ? Yes when the last person will arrive to the spot only then we can say that every person has arrived to the spot . So for that we each of the distance selected we need to find out when the last person will arrive or what will be the maximum time required for a person to arrive to that spot . So we require the maximum time of arrival of a person to a place . 
+
+
+So based on these two observation where we need min(max(time)) we can use binary search to solve the problem .  In every other cas if such function can be formed we can use binary search to solve the problem .
+
+# 13 September 2023
+
+
+## Rando facts
+```
+1. Always keep strict track of possible upperbound and lowerbound to make the answer right . Calculate it wisely.
+
+2. Always keep track for the minimum possible answer qutaioi and keep track of special cases .
+```
