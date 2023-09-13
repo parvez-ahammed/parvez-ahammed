@@ -1393,5 +1393,5 @@ So based on these two observation where we need min(max(time)) we can use binary
 ```
 1. Always keep strict track of possible upperbound and lowerbound to make the answer right . Calculate it wisely.
 
-2. Always keep track for the minimum possible answer qutaioi and keep track of special cases .
+2. Always keep track for the minimum possible answer qutaioi and keep track of special cases like n=1 n = 0 etc .
 ```
