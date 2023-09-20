@@ -1395,3 +1395,22 @@ So based on these two observation where we need min(max(time)) we can use binary
 
 2. Always keep track for the minimum possible answer qutaioi and keep track of special cases like n=1 n = 0 etc .
 ```
+
+# 19 September 2023
+
+Completed the binary search part from YKW course and solved some problems .
+
+## Random Facts
+
+```
+1. boolalpha can be used to output true/false in the terminal
+
+```
+# 20 septermber 2023
+
+## Random Facts
+
+
+
+1. keep very very strict care for worst case or upper bound in BS
+2. Count the upperbound as perfectly as you can 
