@@ -1414,3 +1414,41 @@ Completed the binary search part from YKW course and solved some problems .
 
 1. keep very very strict care for worst case or upper bound in BS
 2. Count the upperbound as perfectly as you can 
+
+# 29 September 2023
+## 7th class of phase one of you know who
+## Divisors the sqrt way
+
+1. We can find every divisor in O(N) but we can do it in O(sqrt(N)) so min (i , j) <= N
+2. keep check for the Long long int overflow
+3. For every number which aren't perfect we will get even divisors
+4. Try to think in reverse 
+5. Find all divisor from in O (nlgn) using 
+```cpp
+// basically sieve of divisor
+for (int = 1 ;  i < N  ; i++)
+{
+    for (int j = i ;  j < N ; j+= i)
+    {
+        divisors[j].push_back(i);
+    }
+}
+
+```
+
+6. Using this we can also find out the number of primes in a range in O(nlogn) time complexity
+
+
+## Primes
+
+1. Have only 2 divisor (1 and that number)
+2. If the number has more than two divisor then it is not a prime number
+3. For every number there is only one unique prime factorization
+
+
+## Difference array
+Adjecent elements difference and by calculating it we can restore the original array and for every array we will get a unique difference array .
+
+> d[i] = a[i] - a[i-1]
+
+> The main array can be restored from the difference array it is the prefix sum of the difference array
