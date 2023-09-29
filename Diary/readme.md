@@ -1452,3 +1452,12 @@ Adjecent elements difference and by calculating it we can restore the original a
 > d[i] = a[i] - a[i-1]
 
 > The main array can be restored from the difference array it is the prefix sum of the difference array
+
+# 29 September 2023
+
+## Random Facts
+
+```
+1. For iterating inside primes loop keep the counter in long long int or type cast it
+2. There will always be an even number of divisors for a number which is not a perfect square
+3. If I am keeping the track of divisors of LL number I should keep the vector in long long also as there will be at least 1 long long number which is the array itself.
