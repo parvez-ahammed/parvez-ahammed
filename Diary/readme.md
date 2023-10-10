@@ -1461,3 +1461,112 @@ Adjecent elements difference and by calculating it we can restore the original a
 1. For iterating inside primes loop keep the counter in long long int or type cast it
 2. There will always be an even number of divisors for a number which is not a perfect square
 3. If I am keeping the track of divisors of LL number I should keep the vector in long long also as there will be at least 1 long long number which is the array itself.
+```
+
+# 10 October 2023
+
+## Problem Statement 
+
+Suppose you have a 2d array of size N which is initially empty and now in q quries you are told to push x to each list.
+
+## Solution
+
+The idea is to think of using difference array which is . We can keep track when we have to add a value and when we have to erase a value by doing this we can know how a element is contributing to the overall element.  The basic ideal is we need to keep track when a element is contributing and when it is not . If we can generalize this concept we can solve that problem with the concept of difference array .  Here we can do this by keeping two array which will tell us when to remove a element and when to add an element and by using the map we can solve the problem faster.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e6 + 9;
+vector<int> add[N], remove[N];
+
+int main() {
+    int n, q;
+    cin >> n >> q;
+    while (q--) {
+        int l, r, x; 
+        cin >> l >> r >> x;
+        add[l].push_back(x);
+        remove[r + 1].push_back(x);
+    }
+
+    map<int> mp;
+    for (int i = 1; i <= n; ++i) {
+        for (int x : add[i]) {
+            mp[x]++;
+        }
+        for (int x : remove[i]) {
+            mp[x]--;
+            if (mp[x] == 0) {
+                mp.erase(x);
+            }
+        }
+        cout << mp.size() << endl;
+    }
+}
+
+```
+
+## 2D prefix Sum
+
+Prefix sum can be used to find the sum of a range in O(1) time complexity . But what if we are given a 2d array and we are asked to find the sum of a range in a 2d array ? Well we can use the same concept of prefix sum to solve the problem . We can just create a prefix sum array and then we can just use the prefix sum array to find the sum of a range in a 2d array . 
+To calculate the 2d Prefix sum we need to use the formula below 
+
+```
+pre[i][j] = pre[i-1][j] + pre[i][j-1] - pre[i-1][j-1] + a[i][j]
+```
+Here we are subtracting pre[i-1][j-1] because we are adding it twice while adding pre[i-1][j] and pre[i][j-1] .
+
+Now to calculate the sum of a range from x[x1,y1] to y[x2,y2] we can use the formula below 
+
+
+```
+sum = pre[x2][y2] - pre[x1-1][y2] - pre[x2][y1-1] + pre[x1-1][y1-1]
+```
+
+Here we are adding the pre[x1-1][y1-1] because we are subtracting it twice while subtracting pre[x1-1][y2] and pre[x2][y1-1] .
+
+## Problem statement
+
+So now if we need to update a range of square  given AxAy BxBy and we need to add a value to all the elements in that range . How can we do that ?
+
+## Solution
+
+We can use the concept of difference array with 2d prefix sum . Initially we will have a empty cell now We need to update so if we put the value in a place what will it mean ? all the cells in the range will be increased by that value . So we can just add the value to the pre[x1][y1] and subtract the value from pre[x2+1][y2+1] . Now we can just calculate the prefix sum and we will get the updated array . So keeping that in mind we need to find out the areas we have to subtract and the areas we have to add a number. so at last we will get the final array. 
+
+### point to be noted 
+
+Even if we are given a initial value we can just ignore them at first and consider all the cells as zero then at last we can just add those numbers to the final array .
+
+```cpp
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e6 + 9;
+vector<int> add[N], remove[N];
+
+int main() {
+    int n, q; cin >> n >> q;
+    while (q--) {
+        int l, r, x; cin >> l >> r >> x;
+        add[l].push_back(x);
+        remove[r + 1].push_back(x);
+    }
+
+    map<int> mp;
+    for (int i = 1; i <= n; ++i) {
+        for (int x : add[i]) {
+            mp[x]++;
+        }
+        for (int x : remove[i]) {
+            mp[x]--;
+            if (mp[x] == 0) {
+                mp.erase(x);
+            }
+        }
+        cout << mp.size() << endl;
+    }
+}
+
+```
