@@ -1,5 +1,22 @@
 # 2023
 
+
+## `AUST CSE CARNIVAL 2.0 PROGRAMMING CONTEST`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **Champion**                                                  |
+| **Team Name**         | The Final Frontier                                            |
+| **Team members**      | Parvez Ahammed <br> Nafis Shahriar <br> Fatin Ishraq          |
+| **Result**            | Result Published in 15th August 2023                          |
+
+## `AUST CSE CARNIVAL 2.0 SOFTWARE EXHIBITION`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                    | 
+| **Result**            | **Champion**                                                      |
+| **Team Name**         | AUST_BUDDIES                                                      |
+| **Team members**      | Parvez Ahammed <br> Tabassum Tara Lamia <br> Sabbir Ahmed salman  |
+| **Result**            | Result Published in 15th August 2023                              |
+
 ## `AUST CSE CARNIVAL 1.0 SOFTWARE EXHIBITION`
 | **Event**             |  **Details**                                                  |              
 | -------------         |---------------                                                | 
