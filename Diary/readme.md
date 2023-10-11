@@ -1570,3 +1570,39 @@ int main() {
 }
 
 ```
+
+# 11 october 2023
+
+## Two pointer
+
+So the general idea in two pointer is once you get a valid sub array or a valid part you should be able to tell that the rest of the parts are valid or invalid.  Typically sub array problems can often be solved by using this two pointer approach also the problems that can be solved using two pointer can also be solved using binary search . 
+
+A pseudocode can be found below
+
+```cpp
+
+
+
+// first pointer
+for (int l = 1 ; l <= n ; l++)
+{
+    // second pointer
+    while (r <= n)
+    {
+        if (invalidCondition()){
+            break;
+        }
+        
+        // do something
+        r++;
+    
+    }
+
+    // update based on the latest
+}
+
+```
+So although it looks like an n^2 loop it is actually an n loop as we are not resetting the value of the pointers and it is just going forward . We can also use this approach to solve problems like finding the number of sub arrays with sum k . 
+
+If we can think or attack a problem like this then we can solve that problem using tp
+
