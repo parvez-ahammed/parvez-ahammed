@@ -1,6 +1,14 @@
 # 2023
 
 
+## `Code refactoring challenge of ITverse`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **top 18 out of 91 team**                                                |
+| **Team Name**         | Frost Byte                                         |
+| **Team members**      | Parvez Ahammed <br> Erfan Ahmed Siam <br> Farhan Tanvir         |
+| **Result**            | Result Published in 5th November 2023                          |
+
 ## `UXplorer contest of ITverse`
 | **Event**             |  **Details**                                                  |              
 | -------------         |---------------                                                | 
