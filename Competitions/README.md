@@ -1,10 +1,18 @@
 # 2023
 
 
+## `UXplorer contest of ITverse`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **Participant**                                                  |
+| **Team Name**         | Freons                                          |
+| **Team members**      | Parvez Ahammed <br> Sabbir Ahammed Salman <br> Sabbir Ahmed Abir         |
+| **Result**            | Result Published in 5th November 2023                          |
+
 ## `AUST CSE CARNIVAL 2.0 PROGRAMMING CONTEST`
 | **Event**             |  **Details**                                                  |              
 | -------------         |---------------                                                | 
-| **Result**            | **Champion**                                                  |
+| **Result**            | **2nd Runners up**                                                  |
 | **Team Name**         | The Final Frontier                                            |
 | **Team members**      | Parvez Ahammed <br> Nafis Shahriar <br> Fatin Ishraq          |
 | **Result**            | Result Published in 15th August 2023                          |
