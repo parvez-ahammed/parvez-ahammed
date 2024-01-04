@@ -1606,3 +1606,58 @@ So although it looks like an n^2 loop it is actually an n loop as we are not res
 
 If we can think or attack a problem like this then we can solve that problem using tp
 
+
+
+# 2024 - The year of keeping Promises
+
+# 4 january 2024
+
+## Lab   1 class on January 2
+
+### DFS Ordering
+DFS ordering is a way to order the nodes of a graph in the order they are visited by a DFS traversal. There are three types of DFS ordering:
+
+1. Pre-ordering: The order in which the nodes are visited by a DFS traversal.
+
+2. Post-ordering: The order in which the nodes are visited by a DFS traversal, but the nodes are added to the ordering after all their children have been added.
+
+3. Reverse post-ordering: The order in which the nodes are visited by a DFS traversal, but the nodes are added to the ordering before all their children have been added.
+
+
+So when we do DFS ordering we can turn the tree into a linear array . So we can use this to solve problems like finding the number of nodes in a subtree , finding the number of nodes in a path etc .
+
+
+Now the basic ides is that in DFS what does a node actually holds? It holds the range of its child . So if we can find out the range of a node we can find out the number of nodes in a subtree . So how can we find out the range of a node ? Well we can just use the DFS ordering to find out the range of a node .
+
+
+### LCA
+LCA is the lowest common ancestor of two nodes . So what does it mean ? It means that it is the lowest node which is the ancestor of both the nodes . So how can we find out the LCA of two nodes ? Well we can just find out the DFS ordering of the two nodes and then we can just find out the lowest node which is common in both the DFS ordering .
+
+
+### HLD
+
+HLD - Heavy Light Decomposition is a technique to decompose a tree into a set of paths such that each path has at most log(n) nodes . So why do we need to decompose a tree into a set of paths ? Well we can use this to solve problems like `finding the sum of a path` , `finding the maximum value of a path` etc .
+
+### Point update and Range Query
+
+So what is point update and range query ? Well it is a technique to update a single value and to query a range of values . So how can we do that ? Well we can just use the HLD to decompose the tree into a set of paths and then we can just update the single value in the paths and then we can just query the range of values in the paths .
+
+### Range Update and Range Query
+
+So what is range update and range query ? Well it is a technique to update a range of values and to query a range of values . So how can we do that ? Well we can just use the HLD to decompose the tree into a set of paths and then we can just update the range of values in the paths and then we can just query the range of values in the paths .
+
+### Problem 1
+
+A tree will be given and there will be q queries . There will be two types of queries .
+1. Add 'x' to a single node 
+2. Given a node find the sum of the subtree of that node
+
+So after finding the DFS ordering in each node we can keep the sum of the subtree of that node . So when we are given a node we can just find out the range of that node and then we can just find out the sum of the subtree of that node .
+
+### Problem 2
+
+A tree will be given and there will be q queries . There will be two types of queries .
+1. Add 'x' to a single node
+2. Find the sum from the root to a node
+
+As adding 'x' to a single node will affect all the subtree so I will have to add values in a range for all the subtrees. And in eah node I will have to keep the sum from the root to that node . So when we are given a node we can just find out the range of that node and then we can just find out the sum of the subtree of that node .
