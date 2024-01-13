@@ -794,8 +794,8 @@ class Player {
     }
 }
 ```
-    - Explanation: A class has fields that are only used in certain situations and aren't needed most of the time.
-    - Solution: Remove unnecessary fields or encapsulate them within methods or objects used during those specific situations.
+- Explanation: A class has fields that are only used in certain situations and aren't needed most of the time.
+- Solution: Remove unnecessary fields or encapsulate them within methods or objects used during those specific situations.
 
 ```java 
 class Player {
@@ -845,8 +845,9 @@ class Player {
     }
 }
 ```
-    - Explanation: Excessive or unclear comments can indicate a lack of self-documenting code.
-    - Solution: Rewrite the code to be more expressive, use meaningful variable and method names, and only include comments when necessary for explaining complex or non-obvious logic.
+- Explanation: Excessive or unclear comments can indicate a lack of self-documenting code.
+
+- Solution: Rewrite the code to be more expressive, use meaningful variable and method names, and only include comments when necessary for explaining complex or non-obvious logic.
 
 ```java 
 class Player {
@@ -892,8 +893,8 @@ public class Player {
     }
 }
 ```
-    - Explanation: Inappropriate relationships and dependencies between classes can lead to tight coupling and complexity.
-    - Solution: Refactor the code to reduce unnecessary relationships and encapsulate behavior where it belongs.
+- Explanation: Inappropriate relationships and dependencies between classes can lead to tight coupling and complexity.
+- Solution: Refactor the code to reduce unnecessary relationships and encapsulate behavior where it belongs.
 
 ```java
 
@@ -957,8 +958,8 @@ public class Player {
     }
 }
 ```
-    - Explanation: When a single change to the codebase requires multiple edits in various places, it indicates that changes are not localized.
-    - Solution: Reorganize the code to make it more cohesive, grouping related functionality together to reduce the need for widespread changes.
+- Explanation: When a single change to the codebase requires multiple edits in various places, it indicates that changes are not localized.
+- Solution: Reorganize the code to make it more cohesive, grouping related functionality together to reduce the need for widespread changes.
 
 ```java
 
@@ -1041,8 +1042,9 @@ class AdvancedPlayer extends Player {
     }
 }
 ```
-    - Explanation: Subclasses inherit methods and attributes from a superclass but don't use or need them, leading to an awkward inheritance hierarchy.
-    - Solution: Refactor the class hierarchy, either by removing unnecessary inheritance or breaking the superclass into more meaningful components.
+- Explanation: Subclasses inherit methods and attributes from a superclass but don't use or need them, leading to an awkward inheritance hierarchy.
+
+- Solution: Refactor the class hierarchy, either by removing unnecessary inheritance or breaking the superclass into more meaningful components.
 ```java
 public interface Player {
     String getCharacterStats();
@@ -1120,8 +1122,8 @@ public class Player {
 }
 
 ```
-    - Explanation: Classes that serve as intermediaries between clients and the classes they interact with, offering little additional value.
-    - Solution: Directly access the classes or refactor the middle man to provide more meaningful services.
+- Explanation: Classes that serve as intermediaries between clients and the classes they interact with, offering little additional value.
+- Solution: Directly access the classes or refactor the middle man to provide more meaningful services.
 
 ```java
 public class Player {
@@ -1176,8 +1178,8 @@ public class Player {
 
 
 ```
-    - Explanation: Classes that only contain data without behavior, essentially acting as simple data structures.
-    - Solution: Add behavior to these classes to encapsulate the data's functionality, making the class more useful and expressive.
+- Explanation: Classes that only contain data without behavior, essentially acting as simple data structures.
+- Solution: Add behavior to these classes to encapsulate the data's functionality, making the class more useful and expressive.
 ```java 
 
 public class Player {
@@ -1234,8 +1236,8 @@ public class Player {
 }
 
 ```
-    - Explanation: Library classes that lack important features or functionality, forcing developers to create their own solutions.
-    - Solution: Extend the library class to include missing features or choose a more comprehensive library.
+- Explanation: Library classes that lack important features or functionality, forcing developers to create their own solutions.
+- Solution: Extend the library class to include missing features or choose a more comprehensive library.
 ```java
 
 public class Player {
@@ -1306,8 +1308,9 @@ public class Player {
     }
 }
 ```
-    - Explanation: When groups of data (e.g., parameters) frequently appear together in code, it suggests a missing object to encapsulate them.
-    - Solution: Create a class or object to group related data, improving code readability and maintainability.
+- Explanation: When groups of data (e.g., parameters) frequently appear together in code, it suggests a missing object to encapsulate them.
+
+- Solution: Create a class or object to group related data, improving code readability and maintainability.
 
 ```java
 
@@ -1396,8 +1399,8 @@ public class Player implements Character {
     }
 }
 ```
-    - Explanation: Creating overly complex or abstract code with features that are not currently needed.
-    - Solution: Simplify the code by removing unused or unnecessary abstractions, refactoring as required when the need arises.
+- Explanation: Creating overly complex or abstract code with features that are not currently needed.
+- Solution: Simplify the code by removing unused or unnecessary abstractions, refactoring as required when the need arises.
 
 ```java
 public class Player {
@@ -1459,8 +1462,9 @@ public class Player {
 
 
 ```
-    - Explanation: A chain of method calls between objects, which can lead to tight coupling and reduce code maintainability.
-    - Solution: Introduce intermediate methods or encapsulate the chain in a single method to minimize the coupling and improve readability.
+- Explanation: A chain of method calls between objects, which can lead to tight coupling and reduce code maintainability.
+
+- Solution: Introduce intermediate methods or encapsulate the chain in a single method to minimize the coupling and improve readability.
 
 ```java
 public class Player {
