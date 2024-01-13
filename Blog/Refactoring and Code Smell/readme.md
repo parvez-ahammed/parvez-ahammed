@@ -131,7 +131,7 @@ This also ensures that the code is more readable and maintainable. We can also o
     
 ```java
 
-public class User {
+public class Player {
     String n;
 
     public void s(String name) { 
@@ -153,15 +153,15 @@ public class User {
     
 ```java
 
-public class User {
-    private String userName;
+public class Player {
+    private String playerName;
 
     public void setUserName(String name) {
-        userName = name;
+        playerName = name;
     }
 
     public String getUserName() {
-        return userName;
+        return playerName;
     }
 }
 
@@ -175,8 +175,8 @@ public class User {
     
 ```java
 
-public class DataProcessor {
-    public void processData(String[] data) {
+public class GamePointProcessor {
+    public void processPoint(String[] data) {
         for (String item : data) {
             if (item.isEmpty()) {
                 System.out.println("Error: Data contains empty values.");
@@ -229,8 +229,8 @@ public class DataProcessor {
 
 ```java
 
-public class DataProcessor {
-    public void processData(String[] data) {
+public class GamePointProcessor {
+    public void processPoint(String[] data) {
         try {
             checkForEmptyValues(data);
             trimData(data);
@@ -313,8 +313,8 @@ public class DataProcessor {
 
 ```java
 
-public class DataProcessor {
-    public void processData(String[] data, int threshold, boolean isDebugMode, String dataLabel, String processingStep) {
+public class GamePointProcessor {
+    public void processPoint(String[] data, int threshold, boolean isDebugMode, String dataLabel, String processingStep) {
         // Processing the data
     }
 }
@@ -323,8 +323,8 @@ public class DataProcessor {
    - Solution: Use parameter objects to group related parameters, or refactor the method to accept fewer parameters by encapsulating related data in objects.
 
 ```java
-public class DataProcessor {
-    public void processData(DataProcessingConfig config) {
+public class GamePointProcessor {
+    public void processPoint(DataProcessingConfig config) {
         // Processing logic using the config object
         // ...
     }
@@ -593,62 +593,912 @@ public class Game {
 ```
 
 7. **Duplicate Code:**
+
+```java
+
+public class GameCharacter {
+    private int health;
+    private int damage;
+
+    public int getHealth() {
+        return health;
+    }
+
+    public GameCharacter(int initialHealth, int initialDamage) {
+        this.health = initialHealth;
+        this.damage = initialDamage;
+    }
+
+    public void attack() {
+        // Other additional logic
+        System.out.println("Performing common attack");
+        health -= 5;
+        System.out.println("Health decreased by 5");
+    }
+
+    public void defend() {
+        // Other additional logic
+        System.out.println("Performing common defend");
+        health -= 3;
+        System.out.println("Health decreased by 3");
+    }   
+}
+
+
+```
+
    - Explanation: Repeating the same code in multiple places in the codebase.
    - Solution: Extract duplicated code into reusable functions or methods to ensure consistency and maintainability.
 
+```java 
+public class GameCharacter {
+    private int health;
+    private int damage;
+
+    public GameCharacter(int initialHealth, int initialDamage) {
+        this.health = initialHealth;
+        this.damage = initialDamage;
+    }
+
+    public void attack() {
+        performAction("attack", 5);
+    }
+
+    public void defend() {
+        performAction("defend", 3);
+    }
+
+    private void performAction(String action, int impact) {
+        System.out.println("Performing common " + action);
+        health -= impact;
+        System.out.println("Health decreased by " + impact);
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+}
+
+```
+
 8. **Lazy Class:**
+
+
+```java
+
+class Player {
+    private String playerName;
+    private PlayerInventory inventory;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.inventory = new PlayerInventory();
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: " + inventory.getInventoryInfo(); // Delegating to PlayerInventory
+    }
+}
+
+class PlayerInventory {
+    public String getInventoryInfo() {
+        // Logic for retrieving inventory information
+        return "Health Potions: 5, Weapons: 3";
+    }
+}
+
+
+```
    - Explanation: Classes that don't provide much value and have too few responsibilities.
    - Solution: Remove or combine classes that don't contribute significantly to the system, redistributing their responsibilities to more relevant classes.
+```java
+class Player {
+    private String playerName;
+    private int health;
+    private int healthPotions;
+    private int weapons;
 
+    public Player(String playerName, int initialHealth, int initialHealthPotions, int initialWeapons) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.healthPotions = initialHealthPotions;
+        this.weapons = initialWeapons;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health + ", Health Potions - " + healthPotions + ", Weapons - " + weapons;
+    }
+}
+
+```
 9. **Feature Envy:**
+
+```java
+class Player {
+    private String playerName;
+    private int health;
+    private int healthPotions;
+    private int weapons;
+
+    public Player(String playerName, int initialHealth, int initialHealthPotions, int initialWeapons) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.healthPotions = initialHealthPotions;
+        this.weapons = initialWeapons;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health + ", Health Potions - " + healthPotions + ", Weapons - " + weapons;
+    }
+}
+
+class PlayerEnvyFeatureChecker {
+    public boolean isPlayerInGoodHealth(Player player) {
+        // Feature envy: Excessive use of player's data
+        int totalStats = player.health + player.healthPotions + player.weapons;
+        return totalStats > 150; // Arbitrary condition for example
+    }
+}
+
+```
    - Explanation: One class is excessively accessing or manipulating another class's features.
    - Solution: Refactor the code to move the functionality to the class that owns the data, promoting better encapsulation and modular design.
 
+```java
+class Player {
+    private String playerName;
+    private int health;
+    private int healthPotions;
+    private int weapons;
+
+    public Player(String playerName, int initialHealth, int initialHealthPotions, int initialWeapons) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.healthPotions = initialHealthPotions;
+        this.weapons = initialWeapons;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health + ", Health Potions - " + healthPotions + ", Weapons - " + weapons;
+    }
+
+    public boolean isInGoodHealth() {
+        int totalStats = health + healthPotions + weapons;
+        return totalStats > 150; // Arbitrary condition for example
+    }
+}
+```
 10. **Temporary Field:**
+
+```java
+class Player {
+    private String playerName;
+    private int health;
+    // Temporary field
+    private int temporaryBuff;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.temporaryBuff = 0;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + (health + temporaryBuff);
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        // Simulating the use of a temporary field for a specific situation
+        this.temporaryBuff = buffValue;
+    }
+}
+```
     - Explanation: A class has fields that are only used in certain situations and aren't needed most of the time.
     - Solution: Remove unnecessary fields or encapsulate them within methods or objects used during those specific situations.
 
+```java 
+class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        // Simulating the application of a temporary buff without a temporary field
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
+
 11. **Comments:**
+
+```java 
+class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+    /*This is method that returns the player's stats as a string for display
+     It returns the player's name and health as a string
+     It is called when the player's stats need to be displayed
+     It takes no parameters
+    */
+    public String xyz() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
     - Explanation: Excessive or unclear comments can indicate a lack of self-documenting code.
     - Solution: Rewrite the code to be more expressive, use meaningful variable and method names, and only include comments when necessary for explaining complex or non-obvious logic.
 
+```java 
+class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+    
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
+
 12. **Inappropriate Intimacy:**
+
+```java
+public class Player {
+    // Health is declared as public allowing other classes to directly access and modify it
+    public String playerName;
+    public int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+    
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
     - Explanation: Inappropriate relationships and dependencies between classes can lead to tight coupling and complexity.
     - Solution: Refactor the code to reduce unnecessary relationships and encapsulate behavior where it belongs.
 
+```java
+
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = calculateBuffedHealth(buffValue);
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    private int calculateBuffedHealth(int buffValue) {
+        return health + buffValue;
+    }
+
+    // Proper method to get the health value
+    public int getHealth() {
+        return health;
+    }
+
+    // Proper method to set the health value
+    public void setHealth(int newHealth) {
+        this.health = newHealth;
+    }
+}
+
+```
+
 13. **Shotgun Surgery:**
+
+```java
+public class Player {
+    private String playerName;
+    private int health;
+    private int armor;
+
+    public Player(String playerName, int initialHealth, int initialArmor) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.armor = initialArmor;
+    }
+    
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health + ", Armor - " + armor;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        int buffedArmor = armor + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth + ", Buffed Armor: " + buffedArmor);
+    }
+}
+```
     - Explanation: When a single change to the codebase requires multiple edits in various places, it indicates that changes are not localized.
     - Solution: Reorganize the code to make it more cohesive, grouping related functionality together to reduce the need for widespread changes.
 
+```java
+
+public class Player {
+    private String playerName;
+    private Stats stats;
+
+    public Player(String playerName, int initialHealth, int initialArmor) {
+        this.playerName = playerName;
+        this.stats = new Stats(initialHealth, initialArmor);
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: " + stats;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        stats.applyBuff(buffValue);
+        System.out.println("Temporary buff applied. " + stats);
+    }
+}
+
+class Stats {
+    private int health;
+    private int armor;
+
+    public Stats(int initialHealth, int initialArmor) {
+        this.health = initialHealth;
+        this.armor = initialArmor;
+    }
+
+    public void applyBuff(int buffValue) {
+        this.health += buffValue;
+        this.armor += buffValue;
+    }
+
+    @Override
+    public String toString() {
+        return "Health - " + health + ", Armor - " + armor;
+    }
+}
+
+```
+
 14. **Refused Bequest:**
+
+```java
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+
+class AdvancedPlayer extends Player {
+    private int specialAbility;
+
+    public AdvancedPlayer(String playerName, int initialHealth, int initialSpecialAbility) {
+        super(playerName, initialHealth);
+        this.specialAbility = initialSpecialAbility;
+    }
+
+    // Refusing to use the applyTemporaryBuff method from the superclass
+    @Override
+    public void applyTemporaryBuff(int buffValue) {
+        System.out.println("Advanced player's special ability activated!");
+        // Special logic for applying buffs, ignoring the superclass behavior
+    }
+}
+```
     - Explanation: Subclasses inherit methods and attributes from a superclass but don't use or need them, leading to an awkward inheritance hierarchy.
     - Solution: Refactor the class hierarchy, either by removing unnecessary inheritance or breaking the superclass into more meaningful components.
+```java
+public interface Player {
+    String getCharacterStats();
+    void applyTemporaryBuff(int buffValue);
+}
+
+public class BasicPlayer implements Player {
+    private String playerName;
+    private int health;
+
+    public BasicPlayer(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    @Override
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    @Override
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+
+public class AdvancedPlayer implements Player {
+    private String playerName;
+    private int specialAbility;
+
+    public AdvancedPlayer(String playerName, int initialSpecialAbility) {
+        this.playerName = playerName;
+        this.specialAbility = initialSpecialAbility;
+    }
+
+    @Override
+    public String getCharacterStats() {
+        return playerName + "'s Stats: (Advanced Player)";
+    }
+
+    @Override
+    public void applyTemporaryBuff(int buffValue) {
+        System.out.println("Advanced player's special ability activated!");
+        // Special logic for applying buffs
+    }
+}
+```
 
 15. **Middle Man:**
+
+```java
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    // Middle Man method
+    public void displayCharacterStats() {
+        System.out.println(getCharacterStats());
+    }
+}
+
+```
     - Explanation: Classes that serve as intermediaries between clients and the classes they interact with, offering little additional value.
     - Solution: Directly access the classes or refactor the middle man to provide more meaningful services.
 
+```java
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
+
 16. **Data Class:**
+
+```java
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    // Accessors and mutators
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+}
+
+
+```
     - Explanation: Classes that only contain data without behavior, essentially acting as simple data structures.
     - Solution: Add behavior to these classes to encapsulate the data's functionality, making the class more useful and expressive.
+```java 
+
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    public void takeDamage(int damage) {
+        if (damage > 0) {
+            health -= damage;
+            System.out.println(playerName + " took damage. Remaining Health: " + health);
+        }
+    }
+
+    
+}
+
+```
 
 17. **Incomplete Library Class:**
+
+```java
+
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+
+```
     - Explanation: Library classes that lack important features or functionality, forcing developers to create their own solutions.
     - Solution: Extend the library class to include missing features or choose a more comprehensive library.
+```java
+
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    public void dealDamage(int damage) {
+        health -= damage;
+        System.out.println("Player took damage. Remaining Health: " + health);
+    }
+
+    public void heal(int healingAmount) {
+        health += healingAmount;
+        System.out.println("Player healed. Updated Health: " + health);
+    }
+
+    public boolean isAlive() {
+        return health > 0;
+    }
+}
+
+```
 
 18. **Data Clumps:**
+
+```java
+
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    // Data clump: playerName and health are frequently passed together
+    public void dealDamage(int damage) {
+        System.out.println(playerName + " took damage. Remaining Health: " + (health - damage));
+    }
+
+    // Data clump: playerName and health are frequently passed together
+    public void heal(int healingAmount) {
+        System.out.println(playerName + " healed. Updated Health: " + (health + healingAmount));
+    }
+}
+```
     - Explanation: When groups of data (e.g., parameters) frequently appear together in code, it suggests a missing object to encapsulate them.
     - Solution: Create a class or object to group related data, improving code readability and maintainability.
 
+```java
+
+public class Player {
+    private PlayerStats playerStats;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerStats = new PlayerStats(playerName, initialHealth);
+    }
+
+    public String getCharacterStats() {
+        return playerStats.getStats();
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        playerStats.applyBuff(buffValue);
+    }
+
+    public void dealDamage(int damage) {
+        playerStats.takeDamage(damage);
+    }
+
+    public void heal(int healingAmount) {
+        playerStats.heal(healingAmount);
+    }
+}
+
+class PlayerStats {
+    private String playerName;
+    private int health;
+
+    public PlayerStats(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    public void takeDamage(int damage) {
+        health -= damage;
+        System.out.println(playerName + " took damage. Remaining Health: " + health);
+    }
+
+    public void heal(int healingAmount) {
+        health += healingAmount;
+        System.out.println(playerName + " healed. Updated Health: " + health);
+    }
+}
+
+```
+
 19. **Speculative Generality:**
+
+```java
+
+public interface Character {
+    String getCharacterStats();
+    void applyBuff(int buffValue);
+}
+
+public class Player implements Character {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    @Override
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    @Override
+    public void applyBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
     - Explanation: Creating overly complex or abstract code with features that are not currently needed.
     - Solution: Simplify the code by removing unused or unnecessary abstractions, refactoring as required when the need arises.
 
+```java
+public class Player {
+    private String playerName;
+    private int health;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health;
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+}
+```
+
 20. **Message Chain:**
+```java
+public class Player {
+    private String playerName;
+    private int health;
+    private Inventory inventory;
+
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.inventory = new Inventory();
+    }
+
+    public String getCharacterStats() {
+        return playerName + "'s Stats: Health - " + health + ", Inventory - " + inventory.getInventoryInfo();
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    private class Inventory {
+        private int healthPotions;
+        private int weapons;
+
+        public Inventory() {
+            this.healthPotions = 5;
+            this.weapons = 3;
+        }
+
+        public String getInventoryInfo() {
+            return "Health Potions: " + healthPotions + ", Weapons: " + weapons;
+        }
+    }
+}
+
+
+```
     - Explanation: A chain of method calls between objects, which can lead to tight coupling and reduce code maintainability.
     - Solution: Introduce intermediate methods or encapsulate the chain in a single method to minimize the coupling and improve readability.
 
+```java
+public class Player {
+    private String playerName;
+    private int health;
+    private Inventory inventory;
 
+    public Player(String playerName, int initialHealth) {
+        this.playerName = playerName;
+        this.health = initialHealth;
+        this.inventory = new Inventory();
+    }
+
+    public String getCharacterStats() {
+        return inventory.getCharacterStats();
+    }
+
+    public void applyTemporaryBuff(int buffValue) {
+        int buffedHealth = health + buffValue;
+        System.out.println("Temporary buff applied. Buffed Health: " + buffedHealth);
+    }
+
+    private class Inventory {
+        private int healthPotions;
+        private int weapons;
+
+        public Inventory() {
+            this.healthPotions = 5;
+            this.weapons = 3;
+        }
+
+        public String getCharacterStats() {
+            return playerName + "'s Stats: Health - " + health + ", Inventory - Health Potions: " + healthPotions + ", Weapons: " + weapons;
+        }
+    }
+}
+
+```
 Addressing these code smells can lead to cleaner, more maintainable, and more efficient code, ultimately improving software quality and development practices.
 
 
