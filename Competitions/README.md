@@ -1,6 +1,48 @@
+# 2024
+
+
+## `Streamstech presents IUT ICT Fest 2024 Code Catalyst: Refactoring Contest `
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **2**                                                       |
+| **Team Name**         | HotBytes                                   |
+| **Team members**      | Parvez Ahammed <br> Sadman Jahin <br> Erfan Ahmed Siam   |
+| **Result**            | Result Published in 26th April                        |
+
+
+## `NCPC Onsite JU 2023`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **118**                                                       |
+| **Team Name**         | AUST_Badammtola                                    |
+| **Team members**      | Parvez Ahammed <br> Mehedi Islam Remob <br> Rajiun Salihan Nabi     |
+| **Result**            | Result Published in 11th March                        |
+
+## `NCPC Preliminary JU 2023`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **106**                                                       |
+| **Team Name**         | AUST_Badammtola                                    |
+| **Team members**      | Parvez Ahammed <br> Mehedi Islam Remob <br> Rajiun Salihan Nabi     |
+| **Result**            | Result Published in 20th February                        |
+
+## `UAP Inter-University Collaborative Contest 1.0!`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **28**                                                       |
+| **Team Name**         | AUST_Potatoes                                    |
+| **Team members**      | Parvez Ahammed <br> Nafis Shahriar <br> Tahfim       |
+| **Result**            | Result Published in 28th January                        |
+
 # 2023
 
-
+## `2023 ICPC Asia Dhaka Regional Online Preliminary Contest`
+| **Event**             |  **Details**                                                  |              
+| -------------         |---------------                                                | 
+| **Result**            | **402**                                                       |
+| **Team Name**         | AUST_POP_CORN                                     |
+| **Team members**      | Parvez Ahammed <br> Abdullah Yusha <br> Tabassum Tara Lamia        |
+| **Result**            | Result Published in 14th October 2024                        |
 ## `Code refactoring challenge of ITverse`
 | **Event**             |  **Details**                                                  |              
 | -------------         |---------------                                                | 
