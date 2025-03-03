@@ -45,7 +45,7 @@
 
 
   
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=piru72&layout=compact&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=parvez-ahammed&layout=compact&theme=tokyonight)
 
 
 
@@ -55,6 +55,6 @@
 
 
 
-| ![github stats](https://github-readme-stats.vercel.app/api?username=piru72&theme=tokyonight) |  <img  src="https://github-readme-streak-stats.herokuapp.com/?user=piru72&theme=tokyonight" alt="piru72" />                                             |              
+| ![github stats](https://github-readme-stats.vercel.app/api?username=parvez-ahammed&theme=tokyonight) |  <img  src="https://github-readme-streak-stats.herokuapp.com/?user=parvez-ahammed&theme=tokyonight" alt="parvez-ahammed" />                                             |              
 | -------------         |---------------                                                
                                               
