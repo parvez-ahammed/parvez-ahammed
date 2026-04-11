@@ -8,7 +8,7 @@
 
 Building end-to-end systems with TypeScript, React, and Node.js
 
-<a href="https://www.linkedin.com/in/piru72/" target="_blank">
+<a href="https://www.linkedin.com/in/ahammed-parvez/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 <a href="mailto:parvezdirom2000@gmail.com">
@@ -70,73 +70,6 @@ Software engineer who builds full-stack applications end-to-end — from designi
 
 ---
 
-## Featured Projects
-
-### ⚡ [Bill Barta — Electricity Bill Viewer](https://github.com/parvez-ahammed/electricity-bill-viewer)
-
-Unified dashboard to track DPDC and NESCO electricity bill balances in Bangladesh, with automated Telegram reports and encrypted credential storage.
-
-| Layer | Stack |
-|---|---|
-| Frontend | React 19, TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query |
-| Backend | Node.js 22, Express.js, TypeScript, TypeORM, Zod, Winston |
-| Database / Cache | SQLite (dual DB), Redis (24h TTL) |
-| Auth | Google OAuth 2.0, JWT, AES-256 encryption |
-| DevOps | Docker, Docker Compose, Nginx, Coolify-ready |
-
-**Why it stands out:** Full layered architecture (Controller → Service → Repository), dual-database design, Redis caching with client-side fallback, automated Telegram bot at scheduled intervals, and comprehensive documentation across 10+ markdown files.
-
----
-
-### 🏆 [PC Tracker — Programming Contest Tracker](https://github.com/parvez-ahammed/pc-tracker)
-
-Tracks and visualises programming contest performances for AUST's competitive programming team.
-
-| Layer | Stack |
-|---|---|
-| Frontend | React 18, TypeScript, Vite, Chakra UI, Framer Motion, React Router |
-| DevOps | Docker |
-
-**Why it stands out:** CSV/Excel export, contest summary dashboards, and contestant detail views — deployed and live on Vercel.
-
----
-
-### 🗂️ [Boilerplate for X](https://github.com/parvez-ahammed/boilerplate-for-x)
-
-A curated collection of production-ready starter templates demonstrating fluency across multiple full-stack combinations.
-
-| Template | Stack |
-|---|---|
-| `nextjs-koajs-dynamodb` | Next.js + Koa.js + DynamoDB |
-| `node-express-postgres-typeorm` | Node.js + Express + PostgreSQL + TypeORM |
-| `node-express-postgres` | Node.js + Express + PostgreSQL |
-| `react-vite-shadcn` | React + Vite + shadcn/ui |
-| `react-vite-ant` | React + Vite + Ant Design |
-| `middy-dynamodb` | AWS Lambda (Middy) + DynamoDB |
-
----
-
-### 📱 [AUST Buddy](https://github.com/parvez-ahammed/aust-buddy)
-
-Android app to simplify student life at Ahsanullah University — bus schedules, class routines, and campus utilities.
-
-| Layer | Stack |
-|---|---|
-| Mobile | Kotlin, Android |
-| Backend | Firebase Auth, Firebase Realtime Database |
-
-**Why it stands out:** 9 stars, real users, complete feature set from auth to scheduling.
-
----
-
-## Current Focus
-
-- Building full-stack TypeScript applications with scalable layered architecture
-- Exploring cloud-native deployment patterns and serverless (AWS Lambda + DynamoDB)
-- Deepening knowledge of system design and distributed systems
-
----
-
 ## GitHub Stats
 
 <div align="center">
@@ -147,18 +80,6 @@ Android app to simplify student life at Ahsanullah University — bus schedules,
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=parvez-ahammed&theme=tokyonight&hide_border=true)](https://github.com/parvez-ahammed)
 
 </div>
-
----
-
-## Profile Improvement Checklist
-
-> This section is a self-improvement tracker. Items below represent known gaps to address.
-
-- [ ] **Pin 3–5 best repos** on the GitHub profile (electricity-bill-viewer, pc-tracker, boilerplate-for-x, aust-buddy)
-- [ ] **Add READMEs** to `casiac` and `freon-messenger` (currently missing)
-- [ ] **Update GitHub bio** to: *Software Engineer · Building full-stack applications with TypeScript, React & Node.js*
-- [ ] **Add live demo links** to pc-tracker and electricity-bill-viewer (Vercel / Coolify URLs)
-- [ ] **Add topics/tags** to electricity-bill-viewer and pc-tracker repos for discoverability
 
 ---
 
