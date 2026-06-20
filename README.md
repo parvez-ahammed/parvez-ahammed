@@ -32,7 +32,16 @@ Software engineer who builds full-stack applications end-to-end — from designi
 
 ---
 
-## Tech Stack
+## 🧭 What I do
+
+- **Full-stack delivery** — ship features from the database schema up to the UI, owning the whole path to production.
+- **Typed, layered codebases** — lean on TypeScript and clean architecture to keep services maintainable.
+- **Containerised deployments** — Docker + Nginx on Linux for predictable, reproducible environments.
+- **Problem solving** — a competitive-programming background (ICPC, ITverse, AUST CSE Carnival and more) that I bring to everyday engineering.
+
+---
+
+## 🛠️ Tech
 
 **Frontend**
 
@@ -67,6 +76,17 @@ Software engineer who builds full-stack applications end-to-end — from designi
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white)
+
+---
+
+## 📚 In this repo
+
+This is my GitHub profile repository — alongside this README it doubles as a notebook of things I've written, learned, and competed in.
+
+- **[Blog](./Blog)** — write-ups and notes: customizing Windows PowerShell, issues faced with React + Vite + TS and ASP.NET, refactoring, and code smells.
+- **[Competitions](./Competitions)** — a log of programming contests and exhibitions I've taken part in (ICPC, ITverse, AUST CSE Carnival, and more).
+- **[Diary](./Diary)** — a running learning diary of algorithms and competitive-programming topics, with code and intuition.
+- **[Learnings](./Learnings)** — structured checklists tracking topics I'm working through (e.g. Android development).
 
 ---
 
