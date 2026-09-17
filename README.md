@@ -27,14 +27,12 @@ Production ASP.NET Core and React on multi-tenant enterprise SaaS · 1400+ compe
 
 ## About Me
 
-Associate Software Engineer at **Cefalo**, building **multi-tenant enterprise SaaS** on **.NET 8 / ASP.NET Core / EF Core / Azure** with **TypeScript + React** front ends. I ship features end to end — REST API, frontend, and database schema — and I currently work on an enterprise scheduling-data exchange platform for a Norwegian client.
+Software engineer with **2+ years** of professional experience, currently Associate Software Engineer at **Cefalo**, building **multi-tenant enterprise SaaS** on **.NET 8 / ASP.NET Core / EF Core / Azure** with **TypeScript + React** front ends. I ship features end to end — REST API, frontend, and database schema — and I currently work on an enterprise scheduling-data exchange platform for a Norwegian client.
 
 - Own the full delivery cycle: database schema → API → UI → deployment
 - Favour SOLID, layered separation, typed codebases, structured logging and RBAC
 - Designed and built a production **event-driven notification subsystem with background job processing**
 - Introduced **AI-assisted development** into a production team workflow — code review, testing, documentation
-
-🌍 **Open to relocation with visa sponsorship** — and to remote-international roles.
 
 ---
 
